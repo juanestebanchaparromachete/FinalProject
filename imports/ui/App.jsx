@@ -55,37 +55,41 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        <header>
-          <h1>Todo List ({this.props.incompleteCount})</h1>
+      <div>
+        <h1>HOLA</h1>
+        <div className="container">
+          <header>
+            <h1>Todo List ({this.props.incompleteCount})</h1>
 
-          <label className="hide-completed">
-            <input
-              type="checkbox"
-              readOnly
-              checked={this.state.hideCompleted}
-              onClick={this.toggleHideCompleted.bind(this)}
-            />
-            Hide Completed Tasks
-          </label>
-
-          <AccountsUIWrapper />
-
-          { this.props.currentUser ?
-            <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
+            <label className="hide-completed">
               <input
-                type="text"
-                ref="textInput"
-                placeholder="Type to add new tasks"
+                type="checkbox"
+                readOnly
+                checked={this.state.hideCompleted}
+                onClick={this.toggleHideCompleted.bind(this)}
               />
-            </form> : ''
-          }
-        </header>
+              Hide Completed Tasks
+            </label>
 
-        <ul>
-          {this.renderTasks()}
-        </ul>
+            <AccountsUIWrapper />
+
+            { this.props.currentUser ?
+              <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
+                <input
+                  type="text"
+                  ref="textInput"
+                  placeholder="Type to add new tasks"
+                />
+              </form> : ''
+            }
+          </header>
+
+          <ul>
+            {this.renderTasks()}
+          </ul>
+        </div>
       </div>
+
     );
   }
 }
