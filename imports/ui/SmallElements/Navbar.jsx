@@ -1,11 +1,11 @@
 import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router-dom';
-import AccountsUIWrapper from './AccountsUIWrapper.jsx';
+import AccountsUIWrapper from '../AccountsUIWrapper.jsx';
 
-const NavBar = () => (
+const Navbar = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNavBar">
     <div className="container">
-      <Link className="navbar-brand" id="oi" to='/projects'>Open Innovation</Link>
+      <Link className="navbar-brand" id="oi" to='/projects'>Alprecio-Retos</Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
               aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
@@ -16,16 +16,16 @@ const NavBar = () => (
         </div>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link className="navBartext " id="projectLink" to='/projects'>Proyectos</Link>
+            {/*<Link className="navBartext " id="projectLink" to='/projects'>Proyectos</Link>*/}
           </li>
           <li className="nav-item">
-            <Link className="navBartext" id="optLink" to='/ideas'>Oportunidades</Link>
+            {/*<Link className="navBartext" id="optLink" to='/ideas'>Oportunidades</Link>*/}
           </li>
           <li className="nav-item">
-            <Link className="navBartext" id="createLink" to='/projects/create'>Crear Proyecto</Link>
+            {/*<Link className="navBartext" id="createLink" to='/projects/create'>Crear Proyecto</Link>*/}
           </li>
           <li className="nav-item">
-            <Link className="navBartext" to='/ideas/create'>Crear oportunidad</Link>
+            {/*<Link className="navBartext" to='/ideas/create'>Crear oportunidad</Link>*/}
           </li>
           {/*<li className="nav-item" style={{textAlign:'left'}}>*/}
           {/*<div id="loginWrapper" className="pull-left">*/}
@@ -38,4 +38,4 @@ const NavBar = () => (
   </nav>
 );
 
-export default NavBar;
+export default Navbar;

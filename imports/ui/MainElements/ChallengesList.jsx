@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import {createContainer} from 'meteor/react-meteor-data';
 import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
+import Navbar from '../SmallElements/Navbar.jsx'
 
 // ProjectsView component - represents the whole app
 class ProjectsView extends Component {
@@ -53,7 +54,7 @@ class ProjectsView extends Component {
     return (
       <div>
         <h1>HOLA LOLA</h1>
-        {/*<NavBar/>*/}
+        <Navbar/>
         {/*<Captcha/>*/}
         {/*<div className="row my-4">*/}
           {/*<div className="col-lg-8">*/}
