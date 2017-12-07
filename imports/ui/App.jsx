@@ -1,11 +1,15 @@
-import React, { Component, PropTypes } from 'react';
-import Task from './Task.jsx';
-import { createContainer } from 'meteor/react-meteor-data';
-import { Tasks } from '/imports/api/tasks.jsx';
-import ReactDOM from 'react-dom';
-import AccountsUIWrapper from './AccountsUIWrapper.jsx';
-import { Meteor } from 'meteor/meteor';
+import React, { Component } from 'react';
+import { Router, Route } from 'react-router';
+import createBrowserHistory from 'history/createBrowserHistory';
+// import ProjectsView from './ListView/ProjectsView.jsx'
+// import IdeasView from './ListView/IdeasView.jsx'
+// import CreateProject from './Creators/CreateProject.jsx'
+// import SingleProject from './SingleView/SingleProject.jsx'
+import { Redirect } from 'react-router';
+// import CreateIdea from './Creators/CreateIdea.jsx'
+import { ChallengesList } from './MainElements/ChallengesList.jsx';
 
+const browserHistory = createBrowserHistory();
 // App component - represents the whole app
 class App extends Component {
 
@@ -56,49 +60,22 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>HOLA</h1>
-        <div className="container">
-          <header>
-            <h1>Todo List ({this.props.incompleteCount})</h1>
-
-            <label className="hide-completed">
-              <input
-                type="checkbox"
-                readOnly
-                checked={this.state.hideCompleted}
-                onClick={this.toggleHideCompleted.bind(this)}
-              />
-              Hide Completed Tasks
-            </label>
-
-            <AccountsUIWrapper />
-
-            { this.props.currentUser ?
-              <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
-                <input
-                  type="text"
-                  ref="textInput"
-                  placeholder="Type to add new tasks"
-                />
-              </form> : ''
-            }
-          </header>
-
-          <ul>
-            {this.renderTasks()}
-          </ul>
-        </div>
+        <Router history={browserHistory}>
+          <div>
+            <Route exact path="/" component={MainRedirect}/>
+            <Route exact path="/challenges" component={ChallengesList}/>
+            <Route exact path="/error" component={NotFound}/>
+          </div>
+        </Router>
       </div>
-
     );
   }
 }
 
-export default createContainer(() => {
-  Meteor.subscribe('tasks');
-  return {
-    tasks: Tasks.find({}, { sort: { createdAt: -1 } }).fetch(),
-    incompleteCount: Tasks.find({ checked: { $ne: true } }).count(),
-    currentUser: Meteor.user(),
-  };
-}, App);
+const NotFound = () => (
+  <h1>404.. This page is not found!</h1>);
+
+const MainRedirect = () => (
+  <Redirect push to="/challenges"/>);
+
+export default App;
