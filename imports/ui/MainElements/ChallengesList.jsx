@@ -49,6 +49,7 @@ class ProjectsView extends Component {
   }
 
   render() {
+    console.log("TEST")
     return (
       <div>
         <h1>HOLA LOLA</h1>
@@ -85,8 +86,8 @@ class ProjectsView extends Component {
 export default createContainer(() => {
   Meteor.subscribe('tasks');
   return {
-    tasks: Tasks.find({}, {sort: {createdAt: -1}}).fetch(),
-    incompleteCount: Tasks.find({checked: {$ne: true}}).count(),
+    // tasks: Tasks.find({}, {sort: {createdAt: -1}}).fetch(),
+    // incompleteCount: Tasks.find({checked: {$ne: true}}).count(),
     currentUser: Meteor.user(),
   };
 }, ProjectsView);

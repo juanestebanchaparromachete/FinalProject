@@ -7,7 +7,7 @@ import createBrowserHistory from 'history/createBrowserHistory';
 // import SingleProject from './SingleView/SingleProject.jsx'
 import { Redirect } from 'react-router';
 // import CreateIdea from './Creators/CreateIdea.jsx'
-import { ChallengesList } from './MainElements/ChallengesList.jsx';
+import ChallengesList from './MainElements/ChallengesList.jsx';
 
 const browserHistory = createBrowserHistory();
 // App component - represents the whole app
