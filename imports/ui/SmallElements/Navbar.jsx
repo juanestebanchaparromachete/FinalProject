@@ -3,38 +3,26 @@ import {Link} from 'react-router-dom';
 import AccountsUIWrapper from '../AccountsUIWrapper.jsx';
 
 const Navbar = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNavBar">
-    <div className="container">
+  <nav className="navbar navbar-expand-md bg-dark navbar-dark">
+    {/*<div className="container">*/}
       <Link className="navbar-brand" id="oi" to='/projects'>Alprecio-Retos</Link>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse " id="navbarResponsive">
-        <div className="text-grey navBartext" style={{marginTop: '5px'}}>
-          <AccountsUIWrapper id="hol"/>
-        </div>
+      <div className="collapse navbar-collapse" id="collapsibleNavbar">
+        {/*<div className="text-grey navBartext" style={{marginTop: '5px'}}>*/}
+          {/*<AccountsUIWrapper id="hol"/>*/}
+        {/*</div>*/}
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            {/*<Link className="navBartext " id="projectLink" to='/projects'>Proyectos</Link>*/}
+            <Link className="navbarText " id="projectLink" to='/challenges'>Retos</Link>
           </li>
           <li className="nav-item">
-            {/*<Link className="navBartext" id="optLink" to='/ideas'>Oportunidades</Link>*/}
+            <Link className="navbarText" id="optLink" to='/publish'>Publicar</Link>
           </li>
-          <li className="nav-item">
-            {/*<Link className="navBartext" id="createLink" to='/projects/create'>Crear Proyecto</Link>*/}
-          </li>
-          <li className="nav-item">
-            {/*<Link className="navBartext" to='/ideas/create'>Crear oportunidad</Link>*/}
-          </li>
-          {/*<li className="nav-item" style={{textAlign:'left'}}>*/}
-          {/*<div id="loginWrapper" className="pull-left">*/}
-          {/*/!*<AccountsUIWrapper className="dropdown-menu-left !important" style={{position: 'static'}}/>*!/*/}
-          {/*</div>*/}
-          {/*</li>*/}
         </ul>
       </div>
-    </div>
+    {/*</div>*/}
   </nav>
 );
 
