@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f63686bf-6f18-489d-bdc8-ec94383abfba" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/imports/ui/Task.jsx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.css" afterPath="$PROJECT_DIR$/client/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.html" afterPath="$PROJECT_DIR$/client/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx" afterPath="$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/App.jsx" afterPath="$PROJECT_DIR$/imports/ui/App.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/Navbar.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/Navbar.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/main.js" afterPath="$PROJECT_DIR$/server/main.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +20,21 @@
       <file leaf-file-name="Navbar.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/Navbar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+            <state relative-caret-position="90">
+              <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="24" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="434">
+              <caret line="430" column="15" lean-forward="false" selection-start-line="430" selection-start-column="15" selection-end-line="430" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -35,8 +42,8 @@
       <file leaf-file-name="App.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/App.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+            <state relative-caret-position="170">
+              <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -44,13 +51,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChallengesList.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="67" column="15" lean-forward="false" selection-start-line="67" selection-start-column="15" selection-end-line="69" selection-end-column="16" />
+            <state relative-caret-position="198">
+              <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateChallenge.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/CreatorElements/CreateChallenge.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="139" column="24" lean-forward="false" selection-start-line="139" selection-start-column="24" selection-end-line="144" selection-end-column="23" />
               <folding>
-                <element signature="e#0#50#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,7 +119,14 @@
       <find>for=</find>
       <find>classname</find>
       <find>&gt;</find>
+      <find>Drop</find>
       <find>class=</find>
+      <find>footer</find>
+      <find>foo</find>
+      <find>toggle-btn</find>
+      <find>toggle</find>
+      <find>navbarText</find>
+      <find>for</find>
     </findStrings>
     <replaceStrings>
       <replace>this.props.challenge</replace>
@@ -123,14 +147,15 @@
         <option value="$PROJECT_DIR$/imports/ui/AccountsUIWrapper.jsx" />
         <option value="$PROJECT_DIR$/package-lock.json" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/imports/ui/App.jsx" />
         <option value="$PROJECT_DIR$/imports/api/challenges.jsx" />
         <option value="$PROJECT_DIR$/server/main.js" />
         <option value="$PROJECT_DIR$/imports/ui/SmallElements/Challenge.jsx" />
+        <option value="$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx" />
+        <option value="$PROJECT_DIR$/imports/ui/App.jsx" />
+        <option value="$PROJECT_DIR$/imports/ui/CreatorElements/CreateChallenge.jsx" />
         <option value="$PROJECT_DIR$/client/main.html" />
         <option value="$PROJECT_DIR$/imports/ui/SmallElements/Navbar.jsx" />
         <option value="$PROJECT_DIR$/client/main.css" />
-        <option value="$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx" />
       </list>
     </option>
   </component>
@@ -350,12 +375,12 @@
       <updated>1512684546013</updated>
       <workItem from="1512684547579" duration="2756000" />
       <workItem from="1512697407705" duration="112000" />
-      <workItem from="1512697595609" duration="4357000" />
+      <workItem from="1512697595609" duration="6771000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7225000" />
+    <option name="totallyTimeSpent" value="9639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -524,16 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/App.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/api/challenges.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -590,39 +605,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/main.html">
+    <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/main.css">
+    <entry file="file://$PROJECT_DIR$/imports/ui/CreatorElements/CreateChallenge.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        <state relative-caret-position="196">
+          <caret line="139" column="24" lean-forward="false" selection-start-line="139" selection-start-column="24" selection-end-line="144" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="66" lean-forward="false" selection-start-line="10" selection-start-column="66" selection-end-line="10" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/Navbar.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        <state relative-caret-position="90">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="24" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx">
+    <entry file="file://$PROJECT_DIR$/client/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="67" column="15" lean-forward="false" selection-start-line="67" selection-start-column="15" selection-end-line="69" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="434">
+          <caret line="430" column="15" lean-forward="false" selection-start-line="430" selection-start-column="15" selection-end-line="430" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

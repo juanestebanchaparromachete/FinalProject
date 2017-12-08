@@ -8,6 +8,7 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import { Redirect } from 'react-router';
 // import CreateIdea from './Creators/CreateIdea.jsx'
 import ChallengesList from './MainElements/ChallengesList.jsx';
+import CreateChallenge from './CreatorElements/CreateChallenge.jsx';
 
 const browserHistory = createBrowserHistory();
 // App component - represents the whole app
@@ -64,6 +65,7 @@ class App extends Component {
           <div>
             <Route exact path="/" component={MainRedirect}/>
             <Route exact path="/challenges" component={ChallengesList}/>
+            <Route exact path="/publish" component={CreateChallenge}/>
             <Route exact path="/error" component={NotFound}/>
           </div>
         </Router>

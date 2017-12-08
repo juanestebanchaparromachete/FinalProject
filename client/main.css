@@ -21,16 +21,417 @@ body {
         /*padding-top: 56px;*/
     }
 }
-.navBartext{
-    color:#ebebeb !important;
-    font-weight: 500 !important;
-}
 #mainNavbar{
     background-color: #86BCFF !important;
+}
+.navbar-custom {
+    background-color:#86BCFF !important;
+    opacity: 0.8 !important;
+    color:#ffffff;
+    border-radius:0;
 }
 .navbarText{
     padding-left: 15px;
     padding-right: 15px;
     font: Calibri;
+    font-size: 41px;
+    color:#ebebeb !important;
+    font-weight: 500 !important;
+}
+.container2{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.custom-footer{
+    background-color:#86BCFF !important;
+    color:#ffffff;
+}
+/*----------------------------------------------------------------------------*/
+/*-----------------------------THIS IS THE FORM CSS-----------------------------*/
+/*----------------------------------------------------------------------------*/
+contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact-submit{
+    background: darkgreen !important;
+    font-size: 18px !important;
+}
+
+#addMoreButton{
+    background: darkgreen !important;
+    font-size: 18px !important;
+}
+
+.removeReqButton{
+    font-size: 18px !important;
+    background: darkred !important;
+}
+
+.form-control{
+    font-size: 18px !important;
+}
+
+#midbar{
+    background: darkslategray;
+}
+
+.requirementInput{
+    font-size: 18px !important;
+}
+
+#contact {
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 40px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+#contact h4 {
+    margin: 5px 0 15px;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    margin-left: 15px;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+}
+
+#contact textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+
+#contact button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #4CAF50;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+    background: #43A047;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact #addMoreButton {
+    cursor: pointer;
+    width: 120px;
+    border: none;
+    /*background: #c82333;*/
+    background: #218838;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 13px;
+}
+
+#contact #addMoreButton:hover {
+    background: #43A047;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contact #addMoreButton:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.requirementInput{
+    width: 50% !important;
+}
+
+#contact .removeReqButton {
+    cursor: pointer;
+    width: 120px;
+    border: none;
+    background: #c82333;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 13px;
+}
+
+#contact .removeReqButton:hover {
+    background: darkred;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contact .removeReqButton:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+    text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: 0;
+    border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+    color: #888;
+}
+
+:-moz-placeholder {
+    color: #888;
+}
+
+::-moz-placeholder {
+    color: #888;
+}
+
+:-ms-input-placeholder {
+    color: #888;
+}
+
+#thingId{
+    position: fixed;
+    margin-top: 10px !important;
+    left: 30px;
     font-size: 20px;
+    z-index: 729837532 !important;
+}
+#login-dropdown-list{
+    z-index: 729837532 !important;
+}
+
+#thingId {
+    /*cursor: pointer;*/
+    width: 120px;
+    border: none;
+    /*background: #c82333;*/
+    background: #218838;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 22px;
+}
+
+#thingId:hover {
+    background: #43A047;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#thingId:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.navBartext{
+    color:#ebebeb !important;
+    font-weight: 500 !important;
+}
+
+#deleteProjectButt {
+    cursor: pointer;
+    width: 90%;
+    border: none;
+    background: #c82333;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#deleteProjectButt:hover {
+    background: #3a0f0f;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#deleteProjectButt:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/*----------------------------------------------------------------------------*/
+/*--------------------------THIS IS THE NAVBAR CSS----------------------------*/
+/*----------------------------------------------------------------------------*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: white;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+nav,
+nav ul {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+nav {
+    z-index: 3000;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3);
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
+nav ul li {
+    z-index: 3000;
+    display: table;
+    width: 100%;
+    height: calc(100% /4);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    background: black;
+    -webkit-perspective: 0px;
+    perspective: 0px;
+    -webkit-transform: rotateX(-90deg) scale(0.5);
+    transform: rotateX(-90deg) scale(0.5);
+    -webkit-transition: all 0.3s ease 0.1s;
+    transition: all 0.3s ease 0.1s;
+}
+nav ul li a {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2.5em;
+    letter-spacing: 0.2em;
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0,0,0,0.3);
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 100;
+}
+nav ul li a:hover {
+    background: rgba(255,255,255,0.1);
+}
+#toggle {
+    display: none;
+}
+#toggle + #toggle-btn,
+.nav-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#toggle + #toggle-btn {
+    height: 40px;
+    width: 40px;
+    z-index: 1000;
+    background: rgba(252,32,50,0.05);
+}
+.nav-icon,
+.nav-icon:before,
+.nav-icon:after {
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    margin: 18px 0;
+    z-index: 900;
+    border-radius: 3px;
+    background: white;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
+.nav-icon:before {
+    content: "";
+    margin-top: -18px;
+}
+.nav-icon:after {
+    content: "";
+    margin-top: 18px;
+}
+#toggle:checked ~ nav {
+    opacity: 1;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+}
+#toggle:checked ~ .nav-icon {
+    background: rgba(255,0,0,0);
+}
+#toggle:checked ~ .nav-icon:before {
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+    margin-top: 0;
+}
+#toggle:checked ~ .nav-icon:after {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+    margin-top: 0;
+}
+#toggle:checked ~ nav ul li {
+    -webkit-transform: rotateY(0deg) scale(1);
+    transform: rotateY(0deg) scale(1);
+}
+#oi{
+    margin-left: 60px;
+    padding-top: 17px;
+}
+#mainHeader{
+    background-color: black !important;
+    height: 68px !important;
 }
