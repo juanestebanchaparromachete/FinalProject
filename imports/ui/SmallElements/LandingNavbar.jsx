@@ -39,16 +39,16 @@ export default class LandingNavbar extends Component {
       content : {
         position                   : 'absolute',
         top                        : '40px',
-        left                       : '350px',
-        right                      : '350px',
+        left                       : '30%',
+        right                      : '30%',
         bottom                     : '20px',
         border                     : '1px solid #ccc',
         background                 : '#fff',
         overflow                   : 'auto',
-        WebkitOverflowScrolling    : 'touch',
+        // WebkitOverflowScrolling    : 'touch',
         borderRadius               : '4px',
         outline                    : 'none',
-        padding                    : '20px'
+        padding                    : '0px'
 
       }
     };
@@ -105,10 +105,7 @@ export default class LandingNavbar extends Component {
                     <div className="group">
                       <input type="submit" className="button" value="Sign Up"/>
                     </div>
-                    <div className="hr"></div>
-                    <div className="foot-lnk">
-                      <label htmlFor="tab-1">Already Member?</label>
-                    </div>
+
                   </div>
                 </div>
               </div>
