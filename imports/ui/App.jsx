@@ -10,6 +10,8 @@ import { Redirect } from 'react-router';
 import ChallengesList from './MainElements/ChallengesList.jsx';
 import CreateChallenge from './CreatorElements/CreateChallenge.jsx';
 import LandingPage from './MainElements/LandingPage.jsx'
+import AssignSale from './MainElements/AssignSale.jsx';
+
 
 const browserHistory = createBrowserHistory();
 // App component - represents the whole app
@@ -68,6 +70,7 @@ class App extends Component {
             <Route exact path="/main" component={LandingPage}/>
             <Route exact path="/challenges" component={ChallengesList}/>
             <Route exact path="/publish" component={CreateChallenge}/>
+            <Route exact path="/sales" component={AssignSale}/>
             <Route exact path="/error" component={NotFound}/>
           </div>
         </Router>
