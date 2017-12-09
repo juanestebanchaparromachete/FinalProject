@@ -25,18 +25,18 @@ class AssignSale extends Component {
   }
 
   renderProjects() {
-    let filteredChallenges = this.props.sales;
+    let filteredSales = this.props.sales;
     // if (this.state.hideCompleted) {
-    //   filteredChallenges = filteredChallenges.filter(task => !task.checked);
+    //   filteredSales = filteredSales.filter(task => !task.checked);
     // }
-    return filteredChallenges.map((sale) => {
+    return filteredSales.map((sale) => {
       // const currentUserId = this.props.currentUser && this.props.currentUser._id;
-      // const showPrivateButton = challenge.owner === currentUserId;
+      // const showPrivateButton = sale.owner === currentUserId;
 
       return (
         <Sale
           key={sale._id}
-          challenge={sale}
+          sale={sale}
         />
       );
     });
@@ -48,7 +48,7 @@ class AssignSale extends Component {
     // Find the text field via the React ref
     const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
 
-    Meteor.call('sale.insert', text);
+    Meteor.call('sales.insert', text);
     // Clear form
     ReactDOM.findDOMNode(this.refs.textInput).value = '';
   }
@@ -71,7 +71,6 @@ class AssignSale extends Component {
           {this.renderProjects()}
           </div>
         </div>
-
       </div>
     );
   }
