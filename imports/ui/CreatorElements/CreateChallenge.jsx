@@ -3,8 +3,9 @@ import {Meteor} from 'meteor/meteor';
 import LandingNavbar from '../SmallElements/LandingNavbar.jsx'
 import {Redirect} from 'react-router';
 import axios from 'axios';
+import {createContainer} from 'meteor/react-meteor-data';
 
-export default class CreateChallenge extends Component {
+class CreateChallenge extends Component {
 
   constructor(props) {
     super(props);
@@ -113,63 +114,31 @@ export default class CreateChallenge extends Component {
         <LandingNavbar/>
         <div className="container2">
           <form id="contact" className="form" onSubmit={this.handleSubmit}>
-            <h3 id="publica">Crea un nuevo reto!</h3>
+            <h3 id="publica">Create a new challenge!</h3>
             {/*<h4>Contact us for custom quote</h4>*/}
             <fieldset>
-              <label htmlFor="challengeName" style={{float:'left'}}>Nombre del reto:</label>
+              <label htmlFor="challengeName" style={{float:'left'}}>Challenge name:</label>
               <input type="text" className="form-control" id="challengeName"
                      aria-labelledby="publica" required
                      value={this.state.name}
-                     onChange={(event) => this.setState({name: event.target.value})}
-                     placeholder="Nombre..."/>
+                     onChange={(event) => this.setState({name: event.target.value})}/>
             </fieldset>
             <fieldset>
-
-              <input type="text" className="form-control" id="slogan"
-                     aria-labelledby="publica" required
-                     value={this.state.slogan}
-                     onChange={(event) => this.setState({slogan: event.target.value})}
-                     placeholder="Slogan..."/>
-            </fieldset>
-            <fieldset>
-              <label htmlFor="challengeDesc" style={{float:'left'}}>Descripción del reto:</label>
+              <label htmlFor="challengeDesc" style={{float:'left'}}>Challenge description:</label>
               <input type="text" className="form-control" id="challengeDesc"
                      aria-labelledby="publica" required
                      value={this.state.description}
-                     onChange={(event) => this.setState({description: event.target.value})}
-                     placeholder="Descripción..."/>
+                     onChange={(event) => this.setState({description: event.target.value})}/>
             </fieldset>
             <fieldset>
-              <label htmlFor="challengeDesc" style={{float:'left'}}>Palabras clave:</label>
-              {/*<Dropzone*/}
-                {/*multiple={false}*/}
-                {/*accept="image/*"*/}
-                {/*onDrop={this.onDrop.bind(this)}>*/}
-                {/*<p>Arrastra una imágen o haz click para seleccionar y subir un archivo.</p>*/}
-              {/*</Dropzone>*/}
+              <label htmlFor="challengeDesc" style={{float:'left'}}>Key words(comma separated):</label>
+              <input type="text" className="form-control" id="challengeKeyWords"
+                     aria-labelledby="publica" required
+                     value={this.state.keyWords}
+                     onChange={(event) => this.setState({keyWords: event.target.value})}/>
             </fieldset>
             <fieldset>
-              <div>
-                <label id="reqs"htmlFor="exampleInputEmail1">Lista de requerimientos de tu proyecto</label><br/>
-                {this.renderRequirements()}
-                <div style={{textAlign: 'center'}}>
-                  <input type='button' value='Agregar más' id="addMoreButton"
-                         onClick={this.addClick.bind(this)}/>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset>
-              <label id="etp" htmlFor="exampleInputEmail1">Etapa actual de tu proyecto</label><br/>
-              <select aria-labelledby="etp" className="form-control" id="exampleSelect2" required
-                      onChange={(e) => this.state.stage = e.target.value}>
-                <option>Gestación</option>
-                <option>Puesta en Marcha</option>
-                <option>Desarrollo Inicial</option>
-                <option>Crecimiento y consolidación</option>
-              </select>
-            </fieldset>
-            <fieldset>
-              <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Publicar
+              <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Publish
               </button>
             </fieldset>
           </form>
@@ -178,3 +147,9 @@ export default class CreateChallenge extends Component {
     )
   }
 }
+
+export default createContainer(() => {
+  return {
+    currentUser: Meteor.user(),
+  };
+}, CreateChallenge);

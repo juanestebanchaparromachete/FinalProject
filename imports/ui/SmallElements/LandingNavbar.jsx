@@ -47,7 +47,7 @@ class LandingNavbar extends Component {
           title={<span>ERROR</span>}
           onConfirm={this.hideAlert}
         >
-          <span>Las contraseñas <span style={{color: '#F8BB86'}}>no coinciden</span></span>
+          <span>The passwords <span style={{color: '#F8BB86'}}>do not match</span></span>
         </SweetAlert>
       });
     }
@@ -89,7 +89,7 @@ class LandingNavbar extends Component {
             title={<span>ERROR</span>}
             onConfirm={this.hideAlert}
           >
-            <span>Tu usuario o contraseña <span style={{color: '#F8BB86'}}>está mal</span>, por favor inténtalo de nuevo.</span>
+            <span>Your username and/or password <span style={{color: '#F8BB86'}}>is wrong</span>, please try again.</span>
           </SweetAlert>
         });
         console.log(error);
@@ -264,12 +264,12 @@ class LandingNavbar extends Component {
               <ul className="nav navbar-nav navbar-right">
                 {this.props.currentUser ?
                   <li className="active">
-                    <Link className="navbarText " id="projectLink" to='/challenges'>Retos</Link>
+                    <Link className="navbarText " id="projectLink" to='/challenges'>Challenges</Link>
                   </li> : null
                 }
                 {this.props.currentUser ?
                   <li className="active">
-                    <Link className="navbarText" id="optLink" to='/publish'>Publicar</Link>
+                    <Link className="navbarText" id="optLink" to='/publish'>Publish</Link>
                   </li> : null
                 }
                 {this.props.currentUser ?
@@ -279,7 +279,7 @@ class LandingNavbar extends Component {
                 }
                 {!this.props.currentUser ?
                   <li className="active">
-                    <a  onClick={() => this.openModal()}>Accede a tu cuenta</a>
+                    <a  onClick={() => this.openModal()}>Access your account</a>
                   </li> : null
                 }
               </ul>
