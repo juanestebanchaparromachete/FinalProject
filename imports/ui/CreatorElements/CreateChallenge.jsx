@@ -4,6 +4,7 @@ import LandingNavbar from '../SmallElements/LandingNavbar.jsx'
 import {Redirect} from 'react-router';
 import axios from 'axios';
 import {createContainer} from 'meteor/react-meteor-data';
+import SweetAlert from 'react-bootstrap-sweetalert'
 
 class CreateChallenge extends Component {
 
@@ -12,23 +13,15 @@ class CreateChallenge extends Component {
     window.scrollTo(0, 0);
     this.state = {
       value: [],
+      alert: null,
       count: 1,
       name: '',
-      slogan: '',
       description: '',
-      thumbnail: '',
       uploadedFileCloudinaryUrl: '',
-      requirements: [],
+      products: [],
       stage: 'Gestación'
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    let idea = props.location.query;
-    if (idea){
-      this.state.description = idea.description;
-      this.state.slogan = idea.slogan;
-      this.state.thumbnail = idea.thumbnail;
-      this.state.name = idea.name;
-    }
   }
 
   handleChange(i, event) {
@@ -37,7 +30,7 @@ class CreateChallenge extends Component {
     this.setState({value});
   }
 
-  renderRequirements() {
+  renderProducts() {
     let uiItems = [];
     for (let i = 0; i < this.state.count; i++) {
       uiItems.push(
@@ -46,9 +39,9 @@ class CreateChallenge extends Component {
             <div key={i} style={{display: 'inline'}}>
               {/*<label htmlFor="exampleInputEmail1">Requerimiento {i + 1} &emsp; </label>*/}
               <input aria-labelledby="reqs" id="exampleSelect1" type="text" value={this.state.value[i] || ''}
-                     placeholder={'Requerimiento ' + (i + 1) + ' ...'}
+                     placeholder={'Product ' + (i + 1) + ' ...'}
                      onChange={this.handleChange.bind(this, i)} required className="requirementInput"/>
-              <input type='button' value='Borrar' className="removeReqButton"
+              <input type='button' value='Delete' className="removeReqButton"
                      onClick={this.removeClick.bind(this, i)}/>
             </div>
           </div>
@@ -60,11 +53,25 @@ class CreateChallenge extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.state.requirements = this.state.value;
+    let newChallenge = {
+      name: this.state.name,
+      description: this.state.description,
+      keyWords: this.state.keyWords,
+      products: this.state.products
+    }
     let b = this;
-    Meteor.call('tasks.insert', this.state, function (error, result) {
+    Meteor.call('challenges.insert', newChallenge, function (error, result) {
       if (error) {
-        Bert.alert( 'Debes iniciar sesión para poder publicar!', 'danger', 'growl-top-right' );
+        console.log(error)
+        b.setState({
+          alert:
+          <SweetAlert
+            title={<span>ERROR</span>}
+            onConfirm={this.hideAlert}
+            >
+            {/*<span>The passwords <span style={{color: '#F8BB86'}}>do not match</span></span>*/}
+          </SweetAlert>
+        });
       }
       else{
         b.setState({redirect: true});
@@ -105,11 +112,12 @@ class CreateChallenge extends Component {
 
   render() {
     if (this.state.redirect) {
-      return <Redirect push to="/projects"/>;
+      return <Redirect push to="/challenges"/>;
     }
 
     return (
       <div>
+        {this.state.alert}
         { Meteor.userId() ? null : <Redirect push to="/main"/> }
         <LandingNavbar/>
         <div className="container2">
@@ -136,6 +144,16 @@ class CreateChallenge extends Component {
                      aria-labelledby="publica" required
                      value={this.state.keyWords}
                      onChange={(event) => this.setState({keyWords: event.target.value})}/>
+            </fieldset>
+            <fieldset>
+              <div>
+                <label id="reqs"htmlFor="exampleInputEmail1">Eligible products for this challenge</label><br/>
+                {this.renderProducts()}
+                <div style={{textAlign: 'center'}}>
+                  <input type='button' value='Add another one' id="addMoreButton"
+                         onClick={this.addClick.bind(this)}/>
+                </div>
+              </div>
             </fieldset>
             <fieldset>
               <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Publish

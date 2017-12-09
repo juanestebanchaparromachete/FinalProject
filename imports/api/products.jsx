@@ -18,13 +18,10 @@ Meteor.methods({
     if (! Meteor.userId()) {
       throw new Meteor.Error('not-authorized');
     }
-
-    Products.insert({
-
-      createdAt: new Date(),
-      owner: Meteor.userId(),
-      username: Meteor.user().username,
-    });
+    product.createdAt = new Date();
+    product.owner = Meteor.userId();
+    product.username = Meteor.user().username;
+    Products.insert(product);
   },
   'products.remove'(challengeId) {
     check(challengeId, String);

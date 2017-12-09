@@ -17,20 +17,16 @@ if (Meteor.isServer) {
 }
 
 Meteor.methods({
-  'challenges.insert'(text) {
-    check(text, String);
+  'challenges.insert'(challenge) {
 
     // Make sure the user is logged in before inserting a challenge
     if (! Meteor.userId()) {
       throw new Meteor.Error('not-authorized');
     }
-
-    Challenges.insert({
-      text,
-      createdAt: new Date(),
-      owner: Meteor.userId(),
-      username: Meteor.user().username,
-    });
+    challenge.createdAt = new Date();
+    challenge.owner = Meteor.userId();
+    challenge.username = Meteor.user().username;
+    Challenges.insert(challenge);
   },
   'challenges.remove'(challengeId) {
     check(challengeId, String);
