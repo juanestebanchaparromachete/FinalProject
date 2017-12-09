@@ -1,16 +1,81 @@
 import React, {Component, PropTypes} from 'react';
 import Modal from 'react-modal';
+import {Meteor} from "meteor/meteor";
+import SweetAlert from 'react-bootstrap-sweetalert';
 
 export default class LandingNavbar extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      modalIsOpen: false
+      isLoggingIn: true,
+      modalIsOpen: false,
+      userId: '',
+      password: '',
+      sPass1:'',
+      sPass2:'',
+      sUserId:'',
+      sPassword:'',
+      sEmail:'',
+      alert: null
     };
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
+    this.handleSignUpSubmit = this.handleSignUpSubmit.bind(this);
+    this.hideAlert = this.hideAlert.bind(this);
+    this.changeLabel = this.changeLabel.bind(this);
+  }
+
+  hideAlert() {
+    this.setState({
+      alert: null
+    });
+  }
+
+  handleSignUpSubmit() {
+    event.preventDefault();
+    if (this.state.sPass1 != this.state.sPass2){
+      this.setState({
+        alert: <SweetAlert
+          title={<span>ERROR</span>}
+          onConfirm={this.hideAlert}
+        >
+          <span>Las contraseñas <span style={{color:'#F8BB86'}}>no coinciden</span></span>
+        </SweetAlert>
+      });
+    }
+    else {
+      Accounts.createUser({
+        email: 'lf@u.com',
+        password: '123456',
+        username: 'felipe'
+      });
+    }
+    event.preventDefault();
+    console.log('test')
+  }
+
+  handleLoginSubmit() {
+    event.preventDefault();
+    Meteor.loginWithPassword(this.state.userId, this.state.password, (error) =>{
+      if(error){
+        this.setState({
+          alert: <SweetAlert
+            title={<span>ERROR</span>}
+            onConfirm={this.hideAlert}
+          >
+            <span>Tu usuario o contraseña <span style={{color:'#F8BB86'}}>está mal</span>, por favor inténtalo de nuevo.</span>
+          </SweetAlert>
+        });
+        console.log(error);
+        this.props.error = error.reason;
+      }
+      else{
+        console.log("WE ARE IN BABY")
+      }
+    })
   }
 
   openModal() {
@@ -24,6 +89,13 @@ export default class LandingNavbar extends Component {
 
   closeModal() {
     this.setState({modalIsOpen: false});
+  }
+
+  changeLabel() {
+    let t = this.state.isLoggingIn;
+    this.setState({
+      isLoggingIn: !t
+    });
   }
 
   render(){
@@ -54,6 +126,7 @@ export default class LandingNavbar extends Component {
     };
     return (
       <div>
+        {this.state.alert}
         <Modal
           style={contentStyles}
           isOpen={this.state.modalIsOpen}
@@ -66,47 +139,60 @@ export default class LandingNavbar extends Component {
           <div id="loginFormLanding">
             <div className="login-wrap">
               <div className="login-html">
-                <input id="tab-1" type="radio" name="tab" className="sign-in" checked/>
+                <input id="tab-1" type="radio" name="tab" className="sign-in" checked={this.state.isLoggingIn} onClick={this.changeLabel}/>
                 <label htmlFor="tab-1" className="tab">Sign In</label>
-                <input id="tab-2" type="radio" name="tab" className="sign-up"/>
+                <input id="tab-2" type="radio" name="tab" className="sign-up" checked={!this.state.isLoggingIn} onClick={this.changeLabel}/>
                 <label htmlFor="tab-2" className="tab">Sign Up</label>
-                <div className="login-form">
-                  <div className="sign-in-htm">
+                <div className="login-form" >
+                  <form className="sign-in-htm" onSubmit={this.handleLoginSubmit}>
                     <div className="group">
                       <label htmlFor="user" className="label testLabel">Username</label>
-                      <input id="user" type="text" className="input"/>
+                      <input id="user" type="text" className="input"
+                             value={this.state.userId}
+                             onChange={(event) => this.setState({userId: event.target.value})}
+                           required/>
                     </div>
                     <div className="group">
                       <label htmlFor="pass" className="label testLabel">Password</label>
-                      <input id="pass" type="password" className="input" data-type="password"/>
+                      <input id="pass" type="password" className="input"
+                             value={this.state.password}
+                             onChange={(event) => this.setState({password: event.target.value})}
+                             required data-type="password"/>
                     </div>
                     <div className="group">
                       <input type="submit" className="button" value="Sign In"/>
                     </div>
                     <div className="hr"></div>
-                  </div>
-                  <div className="sign-up-htm">
+                  </form>
+                  <form className="sign-up-htm" onSubmit={this.handleSignUpSubmit}>
                     <div className="group">
                       <label htmlFor="user" className="label testLabel">Username</label>
-                      <input id="user" type="text" className="input"/>
+                      <input id="user" type="text" className="input"
+                             value={this.state.sUserId}
+                             onChange={(event) => this.setState({sUserId: event.target.value})} required/>
                     </div>
                     <div className="group">
                       <label htmlFor="pass" className="label testLabel">Password</label>
-                      <input id="pass" type="password" className="input" data-type="password"/>
+                      <input id="pass" type="password" className="input" data-type="password"
+                             value={this.state.sPass1}
+                             onChange={(event) => this.setState({sPass1: event.target.value})} required/>
                     </div>
                     <div className="group">
                       <label htmlFor="pass" className="label testLabel">Repeat Password</label>
-                      <input id="pass" type="password" className="input" data-type="password"/>
+                      <input id="pass" type="password" className="input" data-type="password"
+                             value={this.state.sPass2}
+                             onChange={(event) => this.setState({sPass2: event.target.value})} required/>
                     </div>
                     <div className="group">
                       <label htmlFor="pass" className="label testLabel">Email Address</label>
-                      <input id="pass" type="text" className="input"/>
+                      <input id="pass" type="email" className="input"
+                             value={this.state.sEmail}
+                             onChange={(event) => this.setState({sEmail: event.target.value})} required/>
                     </div>
                     <div className="group">
                       <input type="submit" className="button" value="Sign Up"/>
                     </div>
-
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>

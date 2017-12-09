@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f63686bf-6f18-489d-bdc8-ec94383abfba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.css" afterPath="$PROJECT_DIR$/client/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -74,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LandingNavbar.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LandingNavbar.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="90" column="67" lean-forward="false" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="67" />
+            <state relative-caret-position="297">
+              <caret line="187" column="50" lean-forward="false" selection-start-line="187" selection-start-column="50" selection-end-line="187" selection-end-column="50" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -86,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="519" column="34" lean-forward="false" selection-start-line="519" selection-start-column="34" selection-end-line="519" selection-end-column="34" />
+            <state relative-caret-position="241">
+              <caret line="583" column="0" lean-forward="false" selection-start-line="583" selection-start-column="0" selection-end-line="586" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -100,11 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>createCon</find>
-      <find>task</find>
-      <find>this.props.task</find>
-      <find>navBartext</find>
-      <find>classname</find>
       <find>&gt;</find>
       <find>Drop</find>
       <find>foo</find>
@@ -126,10 +123,15 @@
       <find>display:</find>
       <find>checked</find>
       <find>class=</find>
-      <find>for</find>
       <find>label</find>
       <find>background:rgba(109,206,175,1);</find>
       <find>button</find>
+      <find>input</find>
+      <find>display</find>
+      <find>tab-2</find>
+      <find>sign-up</find>
+      <find>for</find>
+      <find>href</find>
     </findStrings>
     <replaceStrings>
       <replace>this.props.challenge</replace>
@@ -162,8 +164,8 @@
         <option value="$PROJECT_DIR$/client/assets/css/main.css" />
         <option value="$PROJECT_DIR$/imports/ui/AuthElements/LoginModal.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/MainElements/LandingPage.jsx" />
-        <option value="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" />
         <option value="$PROJECT_DIR$/client/main.css" />
+        <option value="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" />
       </list>
     </option>
   </component>
@@ -399,12 +401,12 @@
       <updated>1512684546013</updated>
       <workItem from="1512684547579" duration="2756000" />
       <workItem from="1512697407705" duration="112000" />
-      <workItem from="1512697595609" duration="13504000" />
+      <workItem from="1512697595609" duration="17066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16372000" />
+    <option name="totallyTimeSpent" value="19934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -487,7 +489,7 @@
         <state relative-caret-position="126378">
           <caret line="7434" column="0" lean-forward="false" selection-start-line="7434" selection-start-column="0" selection-end-line="7434" selection-end-column="0" />
           <folding>
-            <marker date="1512832479412" expanded="true" signature="111:272" ph="{&quot;version&quot;: &quot;8.0.47&quot;...}" />
+            <marker date="1512838721702" expanded="true" signature="111:272" ph="{&quot;version&quot;: &quot;8.0.47&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -536,7 +538,7 @@
         <state relative-caret-position="126378">
           <caret line="7434" column="0" lean-forward="false" selection-start-line="7434" selection-start-column="0" selection-end-line="7434" selection-end-column="0" />
           <folding>
-            <marker date="1512832479412" expanded="true" signature="111:272" ph="{&quot;version&quot;: &quot;8.0.47&quot;...}" />
+            <marker date="1512838721702" expanded="true" signature="111:272" ph="{&quot;version&quot;: &quot;8.0.47&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -607,7 +609,7 @@
         <state relative-caret-position="516">
           <caret line="7434" column="0" lean-forward="false" selection-start-line="7434" selection-start-column="0" selection-end-line="7434" selection-end-column="0" />
           <folding>
-            <marker date="1512832479412" expanded="true" signature="111:272" ph="{&quot;version&quot;: &quot;8.0.47&quot;...}" />
+            <marker date="1512838721702" expanded="true" signature="111:272" ph="{&quot;version&quot;: &quot;8.0.47&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -722,28 +724,44 @@
     <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
+    <entry file="file://$PROJECT_DIR$/node_modules/react-bootstrap-sweetalert/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="90" column="67" lean-forward="false" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_PLUGINS_DIR$/Meteor/lib/Meteor.jar!/tsMeteorStubs/meteor-v1.3.1.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="2846" column="11" lean-forward="true" selection-start-line="2846" selection-start-column="11" selection-end-line="2846" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="519" column="34" lean-forward="false" selection-start-line="519" selection-start-column="34" selection-end-line="519" selection-end-column="34" />
+        <state relative-caret-position="241">
+          <caret line="583" column="0" lean-forward="false" selection-start-line="583" selection-start-column="0" selection-end-line="586" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="187" column="50" lean-forward="false" selection-start-line="187" selection-start-column="50" selection-end-line="187" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
