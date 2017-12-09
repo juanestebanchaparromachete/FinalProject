@@ -12,7 +12,7 @@ if (Meteor.isServer) {
 }
 
 Meteor.methods({
-  'users.find'() {
+  'users.find'(text) {
 
     // Make sure the user is logged in before inserting a challenge
     if (! Meteor.userId()) {
@@ -20,7 +20,7 @@ Meteor.methods({
     }
 
     return Meteor.users.find({
-      username: Meteor.user().username,
+      username: text,
     }).fetch();
   }
 });

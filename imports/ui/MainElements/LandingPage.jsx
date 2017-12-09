@@ -60,7 +60,7 @@ export default class LandingPage extends Component {
     return (
       <div>
         {this.state.redirect}
-        <LandingNavbar redirectFunction={() => this.redirectBasedOnUserType} />
+        <LandingNavbar />
         <div id="hello">
           <div className="container">
             <div className="row">

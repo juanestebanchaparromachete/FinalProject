@@ -29,6 +29,7 @@ class LandingNavbar extends Component {
     this.handleSignUpSubmit = this.handleSignUpSubmit.bind(this);
     this.hideAlert = this.hideAlert.bind(this);
     this.changeLabel = this.changeLabel.bind(this);
+    this.redirectBasedOnUserType = this.redirectBasedOnUserType.bind(this);
   }
 
   hideAlert() {
@@ -37,7 +38,7 @@ class LandingNavbar extends Component {
     });
   }
 
-  handleSignUpSubmit() {
+  handleSignUpSubmit(event) {
     event.preventDefault();
     let b = this;
     if (this.state.sPass1 != this.state.sPass2) {
@@ -68,15 +69,15 @@ class LandingNavbar extends Component {
         else {
           console.log("WE ARE IN BABY")
           console.log(b.props)
-          b.props.redirectFunction();
+          redirectBasedOnUserType();
+          this.forceUpdate();
         }
       })
     }
-    event.preventDefault();
     console.log('test')
   }
 
-  handleLoginSubmit() {
+  handleLoginSubmit(event) {
     event.preventDefault();
     let b = this;
     Meteor.loginWithPassword(this.state.userId, this.state.password, (error) => {
@@ -93,10 +94,36 @@ class LandingNavbar extends Component {
         this.props.error = error.reason;
       }
       else {
+        console.log('HERE')
+        this.setState({modalIsOpen:false});
+        b.forceUpdate();
         console.log(b.props)
-        b.props.redirectFunction();
+        redirectBasedOnUserType();
+        b.forceUpdate();
       }
     })
+  }
+
+  redirectBasedOnUserType () {
+    let b = this;
+    Meteor.call('users.find',Meteor.user().username, function (error, result) {
+      if (error) {
+        console.log('bad business');
+      }
+      else {
+        console.log(result)
+        if (result[0].type === "MANAGER") {
+          b.setState({
+            redirect: <Redirect push to="/challenges"/>
+          });
+        }
+        else if (result[0].type === "SELLER") {
+          b.setState({
+            redirect: <Redirect push to="/challenges"/>
+          });
+        }
+      }
+    });
   }
 
   openModal() {
@@ -186,7 +213,6 @@ class LandingNavbar extends Component {
                     <div className="group">
                       <input type="submit" className="button" value="Sign In"/>
                     </div>
-                    <div className="hr"></div>
                   </form>
                   <form className="sign-up-htm" onSubmit={this.handleSignUpSubmit}>
                     <div className="group">
@@ -230,7 +256,7 @@ class LandingNavbar extends Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <a className="navbar-brand" href="#"><i className="fa fa-bolt"></i></a>
+              <a className="navbar-brand"><i className="fa fa-bolt"></i></a>
             </div>
             <div className="navbar-collapse collapse">
               <ul className="nav navbar-nav navbar-right">
@@ -246,12 +272,12 @@ class LandingNavbar extends Component {
                 }
                 {this.props.currentUser ?
                   <li className="active">
-                    <a href="#" onClick={() => this.openModal()}>Logout: {this.props.currentUser.username}</a>
+                    <a onClick={() => Meteor.logout()}>Logout: {this.props.currentUser.username}</a>
                   </li> : null
                 }
                 {!this.props.currentUser ?
                   <li className="active">
-                    <a href="#" onClick={() => this.openModal()}>Accede a tu cuenta</a>
+                    <a  onClick={() => this.openModal()}>Accede a tu cuenta</a>
                   </li> : null
                 }
               </ul>
