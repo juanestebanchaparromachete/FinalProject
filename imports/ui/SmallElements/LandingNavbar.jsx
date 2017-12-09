@@ -1,10 +1,11 @@
 import React, {Component, PropTypes} from 'react';
 import Modal from 'react-modal';
 import {Meteor} from "meteor/meteor";
-import SweetAlert from 'react-bootstrap-sweetalert';
-import {Redirect} from 'react-router';
+import {createContainer} from 'meteor/react-meteor-data';
+import SweetAlert from 'react-bootstrap-sweetalert'
+import {Link} from 'react-router-dom';
 
-export default class LandingNavbar extends Component {
+class LandingNavbar extends Component {
 
   constructor(props) {
     super(props);
@@ -13,11 +14,11 @@ export default class LandingNavbar extends Component {
       modalIsOpen: false,
       userId: '',
       password: '',
-      sPass1:'',
-      sPass2:'',
-      sUserId:'',
-      sPassword:'',
-      sInvite:'',
+      sPass1: '',
+      sPass2: '',
+      sUserId: '',
+      sPassword: '',
+      sInvite: '',
       alert: null,
       redirect: null
     };
@@ -28,8 +29,6 @@ export default class LandingNavbar extends Component {
     this.handleSignUpSubmit = this.handleSignUpSubmit.bind(this);
     this.hideAlert = this.hideAlert.bind(this);
     this.changeLabel = this.changeLabel.bind(this);
-    this.afterUserLogin = this.afterUserLogin.bind(this);
-
   }
 
   hideAlert() {
@@ -40,13 +39,14 @@ export default class LandingNavbar extends Component {
 
   handleSignUpSubmit() {
     event.preventDefault();
-    if (this.state.sPass1 != this.state.sPass2){
+    let b = this;
+    if (this.state.sPass1 != this.state.sPass2) {
       this.setState({
         alert: <SweetAlert
           title={<span>ERROR</span>}
           onConfirm={this.hideAlert}
         >
-          <span>Las contraseñas <span style={{color:'#F8BB86'}}>no coinciden</span></span>
+          <span>Las contraseñas <span style={{color: '#F8BB86'}}>no coinciden</span></span>
         </SweetAlert>
       });
     }
@@ -54,20 +54,21 @@ export default class LandingNavbar extends Component {
       let options = {
         username: this.state.sUserId,
         password: this.state.sPass1,
-        type:'SELLER',
+        type: 'SELLER',
         invite: this.state.sInvite,
       }
-      Accounts.createUser(options,{
+      Accounts.createUser(options, {
         password: this.state.sPass1,
         username: this.state.sUserId
       });
       Meteor.loginWithPassword(this.state.sUserId, this.state.sPass1, (error) => {
-        if(error){
+        if (error) {
           console.log("SMTHNG WENT TERRIBLY WRONG")
         }
-        else{
+        else {
           console.log("WE ARE IN BABY")
-          this.afterUserLogin();
+          console.log(b.props)
+          b.props.redirectFunction();
         }
       })
     }
@@ -77,46 +78,25 @@ export default class LandingNavbar extends Component {
 
   handleLoginSubmit() {
     event.preventDefault();
-    Meteor.loginWithPassword(this.state.userId, this.state.password, (error) =>{
-      if(error){
+    let b = this;
+    Meteor.loginWithPassword(this.state.userId, this.state.password, (error) => {
+      if (error) {
         this.setState({
           alert: <SweetAlert
             title={<span>ERROR</span>}
             onConfirm={this.hideAlert}
           >
-            <span>Tu usuario o contraseña <span style={{color:'#F8BB86'}}>está mal</span>, por favor inténtalo de nuevo.</span>
+            <span>Tu usuario o contraseña <span style={{color: '#F8BB86'}}>está mal</span>, por favor inténtalo de nuevo.</span>
           </SweetAlert>
         });
         console.log(error);
         this.props.error = error.reason;
       }
-      else{
-        this.afterUserLogin();
+      else {
+        console.log(b.props)
+        b.props.redirectFunction();
       }
     })
-  }
-
-  afterUserLogin(){
-    console.log(Meteor.user().username)
-    let b = this;
-    Meteor.call('users.find', function (error, result) {
-      if (error) {
-        console.log('bad business');
-      }
-      else{
-        if (result[0].type === "MANAGER"){
-          b.setState({
-            redirect: <Redirect push to="/challenges"/>
-          });
-        }
-        else if (result[0].type === "SELLER"){
-          b.setState({
-            redirect: <Redirect push to="/challenges"/>
-          });
-        }
-      }
-    });
-
   }
 
   openModal() {
@@ -139,36 +119,36 @@ export default class LandingNavbar extends Component {
     });
   }
 
-  render(){
-    let contentStyles ={
-      overlay : {
-        position          : 'fixed',
-        top               : '80px',
-        left              : 0,
-        right             : 0,
-        bottom            : 0,
-        backgroundColor   : 'rgba(255, 255, 255, 0.75)'
+  render() {
+    let contentStyles = {
+      overlay: {
+        position: 'fixed',
+        top: '80px',
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(255, 255, 255, 0.75)'
       },
-      content : {
-        position                   : 'absolute',
-        top                        : '40px',
-        left                       : '30%',
-        right                      : '30%',
-        bottom                     : '20px',
-        border                     : '1px solid #ccc',
-        background                 : '#fff',
-        overflow                   : 'auto',
+      content: {
+        position: 'absolute',
+        top: '40px',
+        left: '30%',
+        right: '30%',
+        bottom: '20px',
+        border: '1px solid #ccc',
+        background: '#fff',
+        overflow: 'auto',
         // WebkitOverflowScrolling    : 'touch',
-        borderRadius               : '4px',
-        outline                    : 'none',
-        padding                    : '0px'
+        borderRadius: '4px',
+        outline: 'none',
+        padding: '0px'
 
       }
     };
+
     return (
       <div>
         {this.state.alert}
-        {this.state.redirect}
         <Modal
           style={contentStyles}
           isOpen={this.state.modalIsOpen}
@@ -181,18 +161,20 @@ export default class LandingNavbar extends Component {
           <div id="loginFormLanding">
             <div className="login-wrap">
               <div className="login-html">
-                <input id="tab-1" type="radio" name="tab" className="sign-in" checked={this.state.isLoggingIn} onClick={this.changeLabel}/>
+                <input id="tab-1" type="radio" name="tab" className="sign-in" checked={this.state.isLoggingIn}
+                       onClick={this.changeLabel}/>
                 <label htmlFor="tab-1" className="tab">Sign In</label>
-                <input id="tab-2" type="radio" name="tab" className="sign-up" checked={!this.state.isLoggingIn} onClick={this.changeLabel}/>
+                <input id="tab-2" type="radio" name="tab" className="sign-up" checked={!this.state.isLoggingIn}
+                       onClick={this.changeLabel}/>
                 <label htmlFor="tab-2" className="tab">Sign Up</label>
-                <div className="login-form" >
+                <div className="login-form">
                   <form className="sign-in-htm" onSubmit={this.handleLoginSubmit}>
                     <div className="group">
                       <label htmlFor="user" className="label testLabel">Username</label>
                       <input id="user" type="text" className="input"
                              value={this.state.userId}
                              onChange={(event) => this.setState({userId: event.target.value})}
-                           required/>
+                             required/>
                     </div>
                     <div className="group">
                       <label htmlFor="pass" className="label testLabel">Password</label>
@@ -252,8 +234,26 @@ export default class LandingNavbar extends Component {
             </div>
             <div className="navbar-collapse collapse">
               <ul className="nav navbar-nav navbar-right">
-                <li className="active"><a
-                  href="#" onClick={() => this.openModal()}>Accede a tu cuenta</a></li>
+                {this.props.currentUser ?
+                  <li className="active">
+                    <Link className="navbarText " id="projectLink" to='/challenges'>Retos</Link>
+                  </li> : null
+                }
+                {this.props.currentUser ?
+                  <li className="active">
+                    <Link className="navbarText" id="optLink" to='/publish'>Publicar</Link>
+                  </li> : null
+                }
+                {this.props.currentUser ?
+                  <li className="active">
+                    <a href="#" onClick={() => this.openModal()}>Logout: {this.props.currentUser.username}</a>
+                  </li> : null
+                }
+                {!this.props.currentUser ?
+                  <li className="active">
+                    <a href="#" onClick={() => this.openModal()}>Accede a tu cuenta</a>
+                  </li> : null
+                }
               </ul>
             </div>
           </div>
@@ -262,3 +262,9 @@ export default class LandingNavbar extends Component {
     );
   }
 }
+
+export default createContainer(() => {
+  return {
+    currentUser: Meteor.user(),
+  };
+}, LandingNavbar);

@@ -5,6 +5,8 @@ import {Meteor} from 'meteor/meteor';
 import Navbar from '../SmallElements/Navbar.jsx'
 import { Challenges } from "../../api/challenges.jsx";
 import Challenge from "../SmallElements/Challenge.jsx";
+import LandingNavbar from "../SmallElements/LandingNavbar";
+import {Redirect} from 'react-router';
 
 // ProjectsView component - represents the whole app
 class ChallengesList extends Component {
@@ -12,7 +14,7 @@ class ChallengesList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hideCompleted: false,
+      hideCompleted: false
     };
   }
 
@@ -54,8 +56,8 @@ class ChallengesList extends Component {
   render() {
     return (
       <div>
-        <Navbar/>
-        {/*<Captcha/>*/}
+        { Meteor.userId() ? null : <Redirect push to="/main"/> }
+        <LandingNavbar/>
         <div className="row my-4">
           <div className="container">
             <h1>Retos activos</h1>

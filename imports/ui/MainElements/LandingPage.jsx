@@ -3,9 +3,8 @@ import {createContainer} from 'meteor/react-meteor-data';
 import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 import LandingNavbar from '../SmallElements/LandingNavbar.jsx'
+import {Redirect} from 'react-router';
 
-
-// ProjectsView component - represents the whole app
 export default class LandingPage extends Component {
 
   constructor(props) {
@@ -13,6 +12,7 @@ export default class LandingPage extends Component {
     this.state = {
       hideCompleted: false,
     };
+    this.redirectBasedOnUserType = this.redirectBasedOnUserType.bind(this);
   }
 
   toggleHideCompleted() {
@@ -20,24 +20,6 @@ export default class LandingPage extends Component {
       hideCompleted: !this.state.hideCompleted,
     });
   }
-
-  // renderProjects() {
-  //   let filteredChallenges = this.props.challenges;
-  //   // if (this.state.hideCompleted) {
-  //   //   filteredChallenges = filteredChallenges.filter(task => !task.checked);
-  //   // }
-  //   return filteredChallenges.map((challenge) => {
-  //     // const currentUserId = this.props.currentUser && this.props.currentUser._id;
-  //     // const showPrivateButton = challenge.owner === currentUserId;
-  //
-  //     return (
-  //       <Challenge
-  //         key={challenge._id}
-  //         challenge={challenge}
-  //       />
-  //     );
-  //   });
-  // }
 
   handleSubmit(event) {
     event.preventDefault();
@@ -50,10 +32,35 @@ export default class LandingPage extends Component {
     ReactDOM.findDOMNode(this.refs.textInput).value = '';
   }
 
+  redirectBasedOnUserType () {
+    let b = this;
+    Meteor.call('users.find', function (error, result) {
+      if (error) {
+        console.log('bad business');
+      }
+      else {
+        console.log(result)
+        if (result[0].type === "MANAGER") {
+          b.setState({
+            redirect: <Redirect push to="/challenges"/>
+          });
+        }
+        else if (result[0].type === "SELLER") {
+          b.setState({
+            redirect: <Redirect push to="/challenges"/>
+          });
+        }
+      }
+    });
+  }
+
   render() {
+    if (Meteor.userId())
+      this.redirectBasedOnUserType();
     return (
       <div>
-        <LandingNavbar/>
+        {this.state.redirect}
+        <LandingNavbar redirectFunction={() => this.redirectBasedOnUserType} />
         <div id="hello">
           <div className="container">
             <div className="row">
