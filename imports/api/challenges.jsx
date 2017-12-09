@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
 import { check } from 'meteor/check';
+import axios from 'axios';
 
 export const Challenges = new Mongo.Collection('challenges');
 
@@ -23,10 +24,23 @@ Meteor.methods({
     if (! Meteor.userId()) {
       throw new Meteor.Error('not-authorized');
     }
-    challenge.createdAt = new Date();
-    challenge.owner = Meteor.userId();
-    challenge.username = Meteor.user().username;
-    Challenges.insert(challenge);
+    let searchParam = '';
+    for (i = 0; i < challenge.products.length; i++) {
+      searchParam += challenge.products[i];
+      if (i != challenge.products.length - 1)
+        searchParam += "%20";
+    }
+    let url = "https://www.googleapis.com/customsearch/v1?q="+searchParam+"&cx=009540301129484155775%3Aipvuwikdgdg&imgColorType=color&imgSize=medium&key=AIzaSyA5iFnQCml3976FMNAcFEF-vnsXClgK2B4";
+    axios.get(url,
+    ).then(response => {
+      console.log(response.data.items[0].pagemap.metatags[0]);
+      challenge.thumbnail = response.data.items[0].pagemap.metatags[0]['og:image'];
+      challenge.createdAt = new Date();
+      challenge.owner = Meteor.userId();
+      challenge.username = Meteor.user().username;
+      return Challenges.insert(challenge);
+    })
+
   },
   'challenges.remove'(challengeId) {
     check(challengeId, String);

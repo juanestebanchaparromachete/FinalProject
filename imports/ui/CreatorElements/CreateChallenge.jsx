@@ -4,7 +4,8 @@ import LandingNavbar from '../SmallElements/LandingNavbar.jsx'
 import {Redirect} from 'react-router';
 import axios from 'axios';
 import {createContainer} from 'meteor/react-meteor-data';
-import SweetAlert from 'react-bootstrap-sweetalert'
+import SweetAlert from 'react-bootstrap-sweetalert';
+
 
 class CreateChallenge extends Component {
 
@@ -57,7 +58,7 @@ class CreateChallenge extends Component {
       name: this.state.name,
       description: this.state.description,
       keyWords: this.state.keyWords,
-      products: this.state.products
+      products: this.state.value
     }
     let b = this;
     Meteor.call('challenges.insert', newChallenge, function (error, result) {
@@ -92,29 +93,10 @@ class CreateChallenge extends Component {
     })
   };
 
-  onDrop(files) {
-    const uploaders = files.map(file => {
-      // Initial FormData
-      const formData = new FormData();
-      formData.append("file", file);
-      formData.append("tags", `codeinfuse, medium, gist`);
-      formData.append("upload_preset", "rtbdnmmi");
-      formData.append("api_key", "rtbdnmmi");
-      formData.append("timestamp", (Date.now() / 1000) | 0);
-
-      return axios.post("https://api.cloudinary.com/v1_1/openinnovation/image/upload", formData, {
-        headers: {"X-Requested-With": "XMLHttpRequest"},
-      }).then(response => {
-        this.state.thumbnail = response.data.secure_url;
-      })
-    });
-  }
-
   render() {
     if (this.state.redirect) {
       return <Redirect push to="/challenges"/>;
     }
-
     return (
       <div>
         {this.state.alert}
