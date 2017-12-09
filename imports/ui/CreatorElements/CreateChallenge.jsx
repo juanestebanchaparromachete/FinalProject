@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Meteor} from 'meteor/meteor';
-import NavBar from '../SmallElements/Navbar.jsx'
+import LandingNavbar from '../SmallElements/LandingNavbar.jsx'
 import {Redirect} from 'react-router';
 import axios from 'axios';
 
@@ -109,7 +109,8 @@ export default class CreateChallenge extends Component {
 
     return (
       <div>
-        <NavBar/>
+        { Meteor.userId() ? null : <Redirect push to="/main"/> }
+        <LandingNavbar/>
         <div className="container2">
           <form id="contact" className="form" onSubmit={this.handleSubmit}>
             <h3 id="publica">Crea un nuevo reto!</h3>
