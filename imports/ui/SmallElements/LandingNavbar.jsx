@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import Modal from 'react-modal';
 import {Meteor} from "meteor/meteor";
 import SweetAlert from 'react-bootstrap-sweetalert';
+import {Redirect} from 'react-router';
 
 export default class LandingNavbar extends Component {
 
@@ -16,8 +17,9 @@ export default class LandingNavbar extends Component {
       sPass2:'',
       sUserId:'',
       sPassword:'',
-      sEmail:'',
-      alert: null
+      sInvite:'',
+      alert: null,
+      redirect: null
     };
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
@@ -26,6 +28,8 @@ export default class LandingNavbar extends Component {
     this.handleSignUpSubmit = this.handleSignUpSubmit.bind(this);
     this.hideAlert = this.hideAlert.bind(this);
     this.changeLabel = this.changeLabel.bind(this);
+    this.afterUserLogin = this.afterUserLogin.bind(this);
+
   }
 
   hideAlert() {
@@ -47,11 +51,25 @@ export default class LandingNavbar extends Component {
       });
     }
     else {
-      Accounts.createUser({
-        email: 'lf@u.com',
-        password: '123456',
-        username: 'felipe'
+      let options = {
+        username: this.state.sUserId,
+        password: this.state.sPass1,
+        type:'SELLER',
+        invite: this.state.sInvite,
+      }
+      Accounts.createUser(options,{
+        password: this.state.sPass1,
+        username: this.state.sUserId
       });
+      Meteor.loginWithPassword(this.state.sUserId, this.state.sPass1, (error) => {
+        if(error){
+          console.log("SMTHNG WENT TERRIBLY WRONG")
+        }
+        else{
+          console.log("WE ARE IN BABY")
+          this.afterUserLogin();
+        }
+      })
     }
     event.preventDefault();
     console.log('test')
@@ -73,9 +91,32 @@ export default class LandingNavbar extends Component {
         this.props.error = error.reason;
       }
       else{
-        console.log("WE ARE IN BABY")
+        this.afterUserLogin();
       }
     })
+  }
+
+  afterUserLogin(){
+    console.log(Meteor.user().username)
+    let b = this;
+    Meteor.call('users.find', function (error, result) {
+      if (error) {
+        console.log('bad business');
+      }
+      else{
+        if (result[0].type === "MANAGER"){
+          b.setState({
+            redirect: <Redirect push to="/challenges"/>
+          });
+        }
+        else if (result[0].type === "SELLER"){
+          b.setState({
+            redirect: <Redirect push to="/challenges"/>
+          });
+        }
+      }
+    });
+
   }
 
   openModal() {
@@ -127,6 +168,7 @@ export default class LandingNavbar extends Component {
     return (
       <div>
         {this.state.alert}
+        {this.state.redirect}
         <Modal
           style={contentStyles}
           isOpen={this.state.modalIsOpen}
@@ -184,10 +226,10 @@ export default class LandingNavbar extends Component {
                              onChange={(event) => this.setState({sPass2: event.target.value})} required/>
                     </div>
                     <div className="group">
-                      <label htmlFor="pass" className="label testLabel">Email Address</label>
-                      <input id="pass" type="email" className="input"
-                             value={this.state.sEmail}
-                             onChange={(event) => this.setState({sEmail: event.target.value})} required/>
+                      <label htmlFor="pass" className="label testLabel">Invite code</label>
+                      <input id="pass" type="text" className="input"
+                             value={this.state.sInvite}
+                             onChange={(event) => this.setState({sInvite: event.target.value})} required/>
                     </div>
                     <div className="group">
                       <input type="submit" className="button" value="Sign Up"/>
