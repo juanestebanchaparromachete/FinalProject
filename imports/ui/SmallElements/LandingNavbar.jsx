@@ -68,9 +68,11 @@ class LandingNavbar extends Component {
         }
         else {
           console.log("WE ARE IN BABY")
+          this.setState({modalIsOpen:false});
+          b.forceUpdate();
           console.log(b.props)
           redirectBasedOnUserType();
-          this.forceUpdate();
+          b.forceUpdate();
         }
       })
     }

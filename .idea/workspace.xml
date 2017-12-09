@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f63686bf-6f18-489d-bdc8-ec94383abfba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/CreatorElements/CreateChallenge.jsx" afterPath="$PROJECT_DIR$/imports/ui/CreatorElements/CreateChallenge.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LandingNavbar.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LandingNavbar.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="89" column="7" lean-forward="true" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
+            <state relative-caret-position="133">
+              <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -51,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateChallenge.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateChallenge.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/CreatorElements/CreateChallenge.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="169">
@@ -155,8 +154,8 @@
         <option value="$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/MainElements/LandingPage.jsx" />
         <option value="$PROJECT_DIR$/imports/api/users.jsx" />
-        <option value="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/CreatorElements/CreateChallenge.jsx" />
+        <option value="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" />
       </list>
     </option>
   </component>
@@ -398,7 +397,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26984000" />
+    <option name="totallyTimeSpent" value="27060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -841,16 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="89" column="7" lean-forward="true" selection-start-line="89" selection-start-column="7" selection-end-line="89" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -867,6 +856,16 @@
           <caret line="111" column="64" lean-forward="false" selection-start-line="111" selection-start-column="64" selection-end-line="111" selection-end-column="64" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
