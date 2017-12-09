@@ -60,13 +60,13 @@ export default class LandingPage extends Component {
     return (
       <div>
         {this.state.redirect}
-        <LandingNavbar redirectFunction={() => this.redirectBasedOnUserType} />
+        <LandingNavbar />
         <div id="hello">
           <div className="container">
             <div className="row">
               <div className="col-lg-10 col-lg-offset-1 centered">
-                <h1>ALPRECIO-RETOS</h1>
-                <h2>Publica y maneja retos con tus vendedores</h2>
+                <h1>ONPOINT-CHALLENGES</h1>
+                <h2>Publish and manage various types of challenges for your salesmen</h2>
               </div>
             </div>
           </div>
