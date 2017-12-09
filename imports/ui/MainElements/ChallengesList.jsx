@@ -75,7 +75,6 @@ class ChallengesList extends Component {
 
 export default createContainer(() => {
   Meteor.subscribe('challenges');
-  console.log(Challenges.find({}, {sort: {createdAt: -1}}).fetch())
   return {
     challenges: Challenges.find({}, {sort: {createdAt: -1}}).fetch(),
     currentUser: Meteor.user(),
