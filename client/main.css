@@ -16,13 +16,6 @@ body {
     /*font-size: 14px;*/
 }
 
-
-.container2{
-    max-width: 1200px;
-    width: 95%;
-    margin: 0 auto;
-    position: relative;
-}
 .custom-footer{
     background-color:#86BCFF !important;
     color:#ffffff;
@@ -30,6 +23,13 @@ body {
 /*----------------------------------------------------------------------------*/
 /*-----------------------------THIS IS THE FORM CSS-----------------------------*/
 /*----------------------------------------------------------------------------*/
+.container2{
+    max-width: 1200px;
+    margin-top: 120px!important;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
 contact input[type="text"],
 #contact input[type="email"],
 #contact input[type="tel"],
@@ -284,157 +284,9 @@ li {
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/*----------------------------------------------------------------------------*/
-/*--------------------------THIS IS THE NAVBAR CSS----------------------------*/
-/*----------------------------------------------------------------------------*/
-/*.navBartext{*/
-    /*color:#ebebeb !important;*/
-    /*font-weight: 500 !important;*/
-/*}*/
-/*#mainNavbar{*/
-    /*background-color: #86BCFF !important;*/
-/*}*/
-/*.navbar-custom {*/
-    /*background-color:#86BCFF !important;*/
-    /*opacity: 0.8 !important;*/
-    /*color:#ffffff;*/
-    /*border-radius:0;*/
-/*}*/
-/*.navbarText{*/
-    /*padding-left: 15px;*/
-    /*padding-right: 15px;*/
-    /*font: Calibri;*/
-    /*font-size: 41px;*/
-    /*color:#ebebeb !important;*/
-    /*font-weight: 500 !important;*/
-/*}*/
-/*html,*/
-/*body {*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*overflow-x: hidden;*/
-    /*!*background: white;*!*/
-/*}*/
-/**,*/
-/**:before,*/
-/**:after {*/
-    /*box-sizing: border-box;*/
-/*}*/
-/*nav,*/
-/*nav ul {*/
-    /*position: fixed;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-/*}*/
-/*nav {*/
-    /*z-index: 3000;*/
-    /*box-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);*/
-    /*opacity: 0;*/
-    /*-webkit-transform: scale(0.3);*/
-    /*transform: scale(0.3);*/
-    /*-webkit-transition: all 0.25s;*/
-    /*transition: all 0.25s;*/
-/*}*/
-/*nav ul li {*/
-    /*z-index: 3000;*/
-    /*display: table;*/
-    /*width: 100%;*/
-    /*height: calc(100% /4);*/
-    /*border-bottom: 1px solid rgba(255,255,255,0.3);*/
-    /*background: black;*/
-    /*-webkit-perspective: 0px;*/
-    /*perspective: 0px;*/
-    /*-webkit-transform: rotateX(-90deg) scale(0.5);*/
-    /*transform: rotateX(-90deg) scale(0.5);*/
-    /*-webkit-transition: all 0.3s ease 0.1s;*/
-    /*transition: all 0.3s ease 0.1s;*/
-/*}*/
-/*nav ul li a {*/
-    /*display: table-cell;*/
-    /*vertical-align: middle;*/
-    /*text-align: center;*/
-    /*text-decoration: none;*/
-    /*font-size: 2.5em;*/
-    /*letter-spacing: 0.2em;*/
-    /*color: #fff;*/
-    /*text-shadow: 0 0 3px rgba(0,0,0,0.3);*/
-    /*font-family: 'Helvetica', sans-serif;*/
-    /*font-weight: 100;*/
-/*}*/
-/*nav ul li a:hover {*/
-    /*background: rgba(255,255,255,0.1);*/
-/*}*/
-/*#toggle {*/
-    /*display: none;*/
-/*}*/
-/*#toggle + #toggle-btn,*/
-/*.nav-icon {*/
-    /*position: absolute;*/
-    /*top: 15px;*/
-    /*right: 15px;*/
-    /*border-radius: 3px;*/
-    /*cursor: pointer;*/
-/*}*/
-/*#toggle + #toggle-btn {*/
-    /*height: 40px;*/
-    /*width: 40px;*/
-    /*z-index: 1000;*/
-    /*background: rgba(252,32,50,0.05);*/
-/*}*/
-/*.nav-icon,*/
-/*.nav-icon:before,*/
-/*.nav-icon:after {*/
-    /*position: absolute;*/
-    /*height: 4px;*/
-    /*width: 40px;*/
-    /*margin: 18px 0;*/
-    /*z-index: 900;*/
-    /*border-radius: 3px;*/
-    /*background: white;*/
-    /*-webkit-transition: all 0.25s;*/
-    /*transition: all 0.25s;*/
-/*}*/
-/*.nav-icon:before {*/
-    /*content: "";*/
-    /*margin-top: -18px;*/
-/*}*/
-/*.nav-icon:after {*/
-    /*content: "";*/
-    /*margin-top: 18px;*/
-/*}*/
-/*#toggle:checked ~ nav {*/
-    /*opacity: 1;*/
-    /*-webkit-transform: scale(0.8);*/
-    /*transform: scale(0.8);*/
-/*}*/
-/*#toggle:checked ~ .nav-icon {*/
-    /*background: rgba(255,0,0,0);*/
-/*}*/
-/*#toggle:checked ~ .nav-icon:before {*/
-    /*-webkit-transform: rotate(-225deg);*/
-    /*transform: rotate(-225deg);*/
-    /*margin-top: 0;*/
-/*}*/
-/*#toggle:checked ~ .nav-icon:after {*/
-    /*-webkit-transform: rotate(225deg);*/
-    /*transform: rotate(225deg);*/
-    /*margin-top: 0;*/
-/*}*/
-/*#toggle:checked ~ nav ul li {*/
-    /*-webkit-transform: rotateY(0deg) scale(1);*/
-    /*transform: rotateY(0deg) scale(1);*/
-/*}*/
-/*#oi{*/
-    /*margin-left: 60px;*/
-    /*padding-top: 17px;*/
-/*}*/
-/*#mainHeader{*/
-    /*background-color: black !important;*/
-    /*height: 68px !important;*/
-/*}*/
 
 /*----------------------------------------------------------------------------*/
-/*-----------------------------THIS IS THE LOGIN FOR--------------------------*/
+/*-----------------------------THIS IS THE LOGIN FORM CS----------------------*/
 /*----------------------------------------------------------------------------*/
 
 

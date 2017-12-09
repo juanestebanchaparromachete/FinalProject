@@ -117,22 +117,22 @@ class CreateChallenge extends Component {
             <h3 id="publica">Create a new challenge!</h3>
             {/*<h4>Contact us for custom quote</h4>*/}
             <fieldset>
-              <label htmlFor="challengeName" style={{float:'left'}}>Challenge name:</label>
-              <input type="text" className="form-control" id="challengeName"
+              <label className="col-md-4" htmlFor="challengeName" style={{float:'left'}}>Challenge name:</label>
+              <input type="text" className="form-control col-md-8" id="challengeName"
                      aria-labelledby="publica" required
                      value={this.state.name}
                      onChange={(event) => this.setState({name: event.target.value})}/>
             </fieldset>
             <fieldset>
-              <label htmlFor="challengeDesc" style={{float:'left'}}>Challenge description:</label>
-              <input type="text" className="form-control" id="challengeDesc"
+              <label className="col-md-4" htmlFor="challengeDesc" style={{float:'left'}}>Challenge description:</label>
+              <input type="text" className="form-control col-md-8" id="challengeDesc"
                      aria-labelledby="publica" required
                      value={this.state.description}
                      onChange={(event) => this.setState({description: event.target.value})}/>
             </fieldset>
             <fieldset>
-              <label htmlFor="challengeDesc" style={{float:'left'}}>Key words(comma separated):</label>
-              <input type="text" className="form-control" id="challengeKeyWords"
+              <label className="col-md-4" htmlFor="challengeDesc" style={{float:'left'}}>Key words(comma separated):</label>
+              <input type="text" className="form-control col-md-8" id="challengeKeyWords"
                      aria-labelledby="publica" required
                      value={this.state.keyWords}
                      onChange={(event) => this.setState({keyWords: event.target.value})}/>

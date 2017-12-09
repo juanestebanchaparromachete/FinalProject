@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f63686bf-6f18-489d-bdc8-ec94383abfba" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.css" afterPath="$PROJECT_DIR$/client/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/CreatorElements/CreateChallenge.jsx" afterPath="$PROJECT_DIR$/imports/ui/CreatorElements/CreateChallenge.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/MainElements/LandingPage.jsx" afterPath="$PROJECT_DIR$/imports/ui/MainElements/LandingPage.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/main.jsx" afterPath="$PROJECT_DIR$/server/main.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CreateChallenge.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateChallenge.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/CreatorElements/CreateChallenge.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="140" column="102" lean-forward="false" selection-start-line="140" selection-start-column="102" selection-end-line="140" selection-end-column="102" />
+            <state relative-caret-position="380">
+              <caret line="133" column="42" lean-forward="false" selection-start-line="133" selection-start-column="42" selection-end-line="133" selection-end-column="42" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -28,26 +28,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LandingNavbar.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
+      <file leaf-file-name="products.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/imports/api/products.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-310">
-              <caret line="91" column="114" lean-forward="false" selection-start-line="91" selection-start-column="114" selection-end-line="91" selection-end-column="114" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LandingPage.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/LandingPage.jsx">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="67" column="27" lean-forward="false" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="277">
+              <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -56,8 +52,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>for=</find>
-      <find>Keep me</find>
       <find>display: non</find>
       <find>display:</find>
       <find>display:none</find>
@@ -86,6 +80,8 @@
       <find>is</find>
       <find>reload</find>
       <find>contr</find>
+      <find>container2</find>
+      <find>Nom</find>
     </findStrings>
     <replaceStrings>
       <replace>this.props.challenge</replace>
@@ -114,14 +110,15 @@
         <option value="$PROJECT_DIR$/client/main.html" />
         <option value="$PROJECT_DIR$/client/assets/css/main.css" />
         <option value="$PROJECT_DIR$/imports/ui/AuthElements/LoginModal.jsx" />
-        <option value="$PROJECT_DIR$/client/main.css" />
         <option value="$PROJECT_DIR$/server/main.js" />
-        <option value="$PROJECT_DIR$/server/main.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx" />
         <option value="$PROJECT_DIR$/imports/api/users.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/MainElements/LandingPage.jsx" />
+        <option value="$PROJECT_DIR$/client/main.css" />
         <option value="$PROJECT_DIR$/imports/ui/CreatorElements/CreateChallenge.jsx" />
+        <option value="$PROJECT_DIR$/server/main.jsx" />
+        <option value="$PROJECT_DIR$/imports/api/products.jsx" />
       </list>
     </option>
   </component>
@@ -170,12 +167,6 @@
               <item name="FinalProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="FinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FinalProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FinalProject" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FinalProject" type="b2602c69:ProjectViewProjectNode" />
@@ -363,7 +354,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27814000" />
+    <option name="totallyTimeSpent" value="28731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -423,18 +414,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="39" column="6" lean-forward="false" selection-start-line="39" selection-start-column="6" selection-end-line="44" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/assets/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -442,6 +426,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1031">
           <caret line="131" column="19" lean-forward="false" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -701,6 +686,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -708,6 +694,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1031">
           <caret line="131" column="19" lean-forward="false" selection-start-line="131" selection-start-column="19" selection-end-line="131" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -741,25 +728,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="583" column="0" lean-forward="false" selection-start-line="583" selection-start-column="0" selection-end-line="586" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/AuthElements/LandingPage.jsx" />
-    <entry file="file://$PROJECT_DIR$/server/main.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/api/tasks.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -818,13 +787,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/CreatorElements/CreateChallenge.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="140" column="102" lean-forward="false" selection-start-line="140" selection-start-column="102" selection-end-line="140" selection-end-column="102" />
+        <state relative-caret-position="380">
+          <caret line="133" column="42" lean-forward="false" selection-start-line="133" selection-start-column="42" selection-end-line="133" selection-end-column="42" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/main.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/api/products.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
