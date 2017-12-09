@@ -9,6 +9,7 @@ import { Redirect } from 'react-router';
 // import CreateIdea from './Creators/CreateIdea.jsx'
 import ChallengesList from './MainElements/ChallengesList.jsx';
 import CreateChallenge from './CreatorElements/CreateChallenge.jsx';
+import LandingPage from './MainElements/LandingPage.jsx'
 
 const browserHistory = createBrowserHistory();
 // App component - represents the whole app
@@ -64,6 +65,7 @@ class App extends Component {
         <Router history={browserHistory}>
           <div>
             <Route exact path="/" component={MainRedirect}/>
+            <Route exact path="/main" component={LandingPage}/>
             <Route exact path="/challenges" component={ChallengesList}/>
             <Route exact path="/publish" component={CreateChallenge}/>
             <Route exact path="/error" component={NotFound}/>
@@ -78,6 +80,6 @@ const NotFound = () => (
   <h1>404.. This page is not found!</h1>);
 
 const MainRedirect = () => (
-  <Redirect push to="/challenges"/>);
+  <Redirect push to="/main"/>);
 
 export default App;

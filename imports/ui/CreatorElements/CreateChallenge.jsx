@@ -112,16 +112,18 @@ export default class CreateChallenge extends Component {
         <NavBar/>
         <div className="container2">
           <form id="contact" className="form" onSubmit={this.handleSubmit}>
-            <h3 id="publica">Publica tu proyecto</h3>
+            <h3 id="publica">Crea un nuevo reto!</h3>
             {/*<h4>Contact us for custom quote</h4>*/}
             <fieldset>
-              <input type="text" className="form-control" id="nomProyecto"
+              <label htmlFor="challengeName" style={{float:'left'}}>Nombre del reto:</label>
+              <input type="text" className="form-control" id="challengeName"
                      aria-labelledby="publica" required
                      value={this.state.name}
                      onChange={(event) => this.setState({name: event.target.value})}
                      placeholder="Nombre..."/>
             </fieldset>
             <fieldset>
+
               <input type="text" className="form-control" id="slogan"
                      aria-labelledby="publica" required
                      value={this.state.slogan}
@@ -129,14 +131,15 @@ export default class CreateChallenge extends Component {
                      placeholder="Slogan..."/>
             </fieldset>
             <fieldset>
-              <input type="text" className="form-control" id="description"
+              <label htmlFor="challengeDesc" style={{float:'left'}}>Descripción del reto:</label>
+              <input type="text" className="form-control" id="challengeDesc"
                      aria-labelledby="publica" required
                      value={this.state.description}
                      onChange={(event) => this.setState({description: event.target.value})}
                      placeholder="Descripción..."/>
             </fieldset>
             <fieldset>
-              <label>Imagen:</label>
+              <label htmlFor="challengeDesc" style={{float:'left'}}>Palabras clave:</label>
               {/*<Dropzone*/}
                 {/*multiple={false}*/}
                 {/*accept="image/*"*/}
