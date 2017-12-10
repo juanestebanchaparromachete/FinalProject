@@ -35,8 +35,6 @@ Meteor.methods({
         //AGREGAR NUEVA VENTA
         console.log(sale);
         Sales.insert(sale);
-
-
     },
     'sales.remove'(saleId) {
         check(saleId, String);

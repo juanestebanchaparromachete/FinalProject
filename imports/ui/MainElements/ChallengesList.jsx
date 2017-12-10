@@ -56,7 +56,12 @@ class ChallengesList extends Component {
         <LandingNavbar/>
         <div className="row my-4">
           <div className="container">
-            <h1>Retos activos</h1>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <h1>Active challenges</h1>
+
           </div>
 
         </div>
