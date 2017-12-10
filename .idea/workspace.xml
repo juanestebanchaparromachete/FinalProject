@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f63686bf-6f18-489d-bdc8-ec94383abfba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/api/challenges.jsx" afterPath="$PROJECT_DIR$/imports/api/challenges.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/api/users.jsx" afterPath="$PROJECT_DIR$/imports/api/users.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx" afterPath="$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx" />
-    </list>
+    <list default="true" id="f63686bf-6f18-489d-bdc8-ec94383abfba" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.meteor/local/" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,7 +43,7 @@
       <file leaf-file-name="challenges.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/api/challenges.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="311">
               <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -680,12 +675,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512868637586</updated>
-      <workItem from="1512868645253" duration="11242000" />
+      <workItem from="1512868645253" duration="11328000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18675000" />
+    <option name="totallyTimeSpent" value="18761000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="777" extended-state="6" />
@@ -1055,10 +1050,10 @@
         <state relative-caret-position="-16669">
           <caret line="220" column="20" lean-forward="false" selection-start-line="220" selection-start-column="20" selection-end-line="220" selection-end-column="20" />
           <folding>
-            <marker date="1512880662730" expanded="true" signature="60479:60496" ph="..." />
-            <marker date="1512880662730" expanded="true" signature="60479:60514" ph="..." />
-            <marker date="1512880662730" expanded="true" signature="60479:60527" ph="..." />
-            <marker date="1512880662730" expanded="true" signature="60479:60542" ph="..." />
+            <marker date="1512880792670" expanded="true" signature="59885:59902" ph="..." />
+            <marker date="1512880792670" expanded="true" signature="59885:59920" ph="..." />
+            <marker date="1512880792670" expanded="true" signature="59885:59933" ph="..." />
+            <marker date="1512880792670" expanded="true" signature="59885:59948" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1142,7 +1137,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/api/challenges.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="311">
           <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
