@@ -355,11 +355,6 @@ class LandingNavbar extends Component {
                     <Link className="navbarText" id="optLink" to='/publish'>Publish</Link>
                   </li> : null
                 }
-                  {this.props.currentUser ?
-                      <li className="active">
-                        <Link className="navbarText" id="optLink" to='/sales'>Assign sale</Link>
-                      </li> : null
-                  }
                 {this.props.currentUser ?
                   <li className="active">
                     <a onClick={() => Meteor.logout()}>Logout: {this.props.currentUser.username}</a>

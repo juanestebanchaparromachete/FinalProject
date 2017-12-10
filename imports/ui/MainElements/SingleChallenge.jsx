@@ -8,6 +8,7 @@ import {confirmAlert} from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'
 import UserCard from "../SmallElements/UserCard"; // Import css
 import { Sales } from '/imports/api/sales.jsx';
+import { Link } from 'react-router-dom';
 
 class SingleChallenge extends Component {
 
@@ -127,8 +128,8 @@ class SingleChallenge extends Component {
               </div>
             </div>
           </div>
+          <Link to={{pathname: '/sale/' + this.state.challenge._id+'/sales'}} className="btn btn-primary moreInfoButton">Add sales</Link>
         </div>
-
         <div className="container">
           <div className="row centered mt grid">
             <h3>Current ranking:</h3>
