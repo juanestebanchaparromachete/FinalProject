@@ -7,6 +7,7 @@ import {Session} from 'meteor/session'
 import {confirmAlert} from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'
 import UserCard from "../SmallElements/UserCard"; // Import css
+import { Sales } from '/imports/api/sales.jsx';
 
 class SingleChallenge extends Component {
 
@@ -22,20 +23,48 @@ class SingleChallenge extends Component {
   }
 
   renderUsers() {
-    // let filteredTasks = this.props.comments;
-    // // if (this.state.hideCompleted) {
-    // //   filteredTasks = filteredTasks.filter(task => !task.checked);
-    // // }
-    // return filteredTasks.map((task, i) => {
-    //   const currentUserId = this.props.currentUser && this.props.currentUser._id;
-    //   // const showPrivateButton = task.owner === currentUserId;
-    //   return (
-    //     <Comment
-    //       key={i}
-    //       comment={task}
-    //     />
-    //   );
-    // });
+    let filteredSales = this.props.sales;
+    let amountHash = {};
+    let quantityHash = {};
+    filteredSales.forEach(function (sale) {
+      for (i = 0; i < sale.products.length; i++) {
+        if (quantityHash[sale.userId] == undefined)
+          quantityHash[sale.userId] = 0;
+        quantityHash[sale.userId] += sale.products[i];
+      }
+      if (amountHash[sale.userId] == undefined)
+        amountHash[sale.userId] = 0;
+      amountHash[sale.userId] += sale.value;
+    })
+    let finalArray = [];
+    for (var key in amountHash) {
+      if (amountHash.hasOwnProperty(key)) {
+        let obj = {};
+        obj[key]=amountHash[key];
+        finalArray.push(obj);
+      }
+    }
+    console.log(finalArray)
+    // finalArray.sort(function compare(a, b) {
+    //   if (a) {
+    //     return -1;
+    //   }
+    //   if (a is greater than b by the ordering criterion) {
+    //     return 1;
+    //   }
+    //   // a must be equal to b
+    //   return 0;
+    // })
+    return filteredSales.map((task, i) => {
+      const currentUserId = this.props.currentUser && this.props.currentUser._id;
+      // const showPrivateButton = task.owner === currentUserId;
+      // return (
+      //   <Comment
+      //     key={i}
+      //     comment={task}
+      //   />
+      // );
+    });
   }
 
 
@@ -101,21 +130,9 @@ class SingleChallenge extends Component {
         <div className="container">
           <div className="row centered mt grid">
             <h3>Current ranking:</h3>
-            <div className="mt"></div>
-            <div className="col-lg-4">
-              <a href="#"><img src="assets/img/01.jpg" alt=""/></a>
-            </div>
-            <div className="col-lg-4">
-              <a href="#"><img src="assets/img/02.jpg" alt=""/></a>
-            </div>
-            <div className="col-lg-4">
-              <a href="#"><img src="assets/img/03.jpg" alt=""/></a>
-            </div>
           </div>
-
           <div className="row mt centered">
-            <UserCard challenge={this.state.challenge}/>
-            <UserCard challenge={this.state.challenge}/>
+            {this.renderUsers()}
           </div>
         </div>
       </div>
@@ -125,8 +142,9 @@ class SingleChallenge extends Component {
 
 
   export default createContainer(() => {
-    // Meteor.subscribe('sales', Session.get('projectId'));
+    Meteor.subscribe('sales', Session.get('challengeId'));
     return {
-    currentUser: Meteor.user(),
+      sales: Sales.find({}, {sort: {createdAt: -1}}).fetch(),
+      currentUser: Meteor.user(),
   };
   }, SingleChallenge);

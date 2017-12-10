@@ -1,19 +1,12 @@
 body {
-    /*padding-top: 54px;*/
     font-family: sans-serif;
-    /*background-color: white;*/
-    /*background-attachment: fixed;*/
-
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-
     padding: 0;
     margin: 0;
-
-    /*font-size: 14px;*/
 }
 
 .custom-footer{
@@ -457,6 +450,18 @@ li {
 /*----------------------------------------------------------------------------*/
 
 .card-body{
+    padding: 5px 5px 5px 5px;
+    background-color: transparent;
+    text-align: center!important;
+    border-style: solid;
+    max-height: 244px;
+    border-width: 4px;
+    border-radius: 1px;
+    border-color: white !important;
+}
+
+.user-card-body{
+    padding: 5px 5px 5px 5px;
     background-color: transparent;
     text-align: center!important;
     border-style: solid;

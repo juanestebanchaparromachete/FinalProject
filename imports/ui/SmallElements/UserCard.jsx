@@ -13,8 +13,8 @@ export default class UserCard extends Component {
     });
     return (
       <div className="col-md-3">
-        <div className="card-body">
-          <img className="card-img-top" src={this.props.challenge.thumbnail} width="200px" height="190px" alt="Imagen descriptiva proyecto"/>
+        <div className="user-card-body">
+          <img className="card-img-top" src={"https://dummyimage.com/400x400/000/fff.png&text="+this.props.key} width="200px" height="190px" alt="Imagen descriptiva proyecto"/>
           <p className="card-text">{this.props.challenge.description}</p>
           <Link onClick={() => Session.set('challengeId', this.props.challenge._id)} to={{pathname: '/challenges/id/' + this.props.challenge._id, query: this.props.challenge}} className="btn btn-primary moreInfoButton">Ver detalle</Link>
         </div>

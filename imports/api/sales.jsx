@@ -6,13 +6,11 @@ export const Sales = new Mongo.Collection('sales');
 
 if (Meteor.isServer) {
   // This code only runs on the server
-  Meteor.publish('sales', function salePublication() {
-    return sales.find({
-      $or: [
-        { private: { $ne: true } },
-        { owner: this.userId },
-      ],
-    });
+  Meteor.publish('sales', function ideasPublication(challengeId) {
+    if (challengeId == null)
+      return null;
+    else
+      return Sales.find({challengeId : challengeId+""});
   });
 }
 
