@@ -6,11 +6,11 @@ export const Sales = new Mongo.Collection('sales');
 
 if (Meteor.isServer) {
   // This code only runs on the server
-  Meteor.publish('sales', function ideasPublication(challengeId) {
-    if (challengeId == null)
+  Meteor.publish('sales', function ideasPublication(saleId) {
+    if (saleId == null)
       return null;
     else
-      return Sales.find({challengeId : challengeId+""});
+      return Sales.find({saleId : saleId+""});
   });
 }
 
@@ -24,6 +24,19 @@ Meteor.methods({
         sale.owner = Meteor.userId();
         sale.username = Meteor.user().username;
         Sales.insert(sale);
+    },
+    'sales.add'(sale) {
+
+        // Make sure the user is logged in before inserting a challenge
+        if (! Meteor.userId()) {
+            throw new Meteor.Error('not-authorized');
+        }
+
+        //AGREGAR NUEVA VENTA
+        console.log(sale);
+        Sales.insert(sale);
+
+
     },
     'sales.remove'(saleId) {
         check(saleId, String);

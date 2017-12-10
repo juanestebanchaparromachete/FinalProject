@@ -37,6 +37,7 @@ class AssignSale extends Component {
       // const showPrivateButton = sale.owner === currentUserId;
         if(sale._id == currentChallenge)
         {
+          this.props.currentChallenge = currentChallenge
       return (
         <Sale
           key={sale._id}
