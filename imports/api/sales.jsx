@@ -6,11 +6,11 @@ export const Sales = new Mongo.Collection('sales');
 
 if (Meteor.isServer) {
   // This code only runs on the server
-  Meteor.publish('sales', function ideasPublication(saleId) {
-    if (saleId == null)
+  Meteor.publish('sales', function ideasPublication(challengeId) {
+    if (challengeId == null)
       return null;
     else
-      return Sales.find({saleId : saleId+""});
+      return Sales.find({challengeId : challengeId+""});
   });
 }
 
@@ -35,7 +35,6 @@ Meteor.methods({
         //AGREGAR NUEVA VENTA
         sale.value =Number(sale.value);
         console.log(sale);
-        console.log(check(Number(sale.value), Number));
         Sales.insert(sale);
     },
     'sales.remove'(saleId) {
