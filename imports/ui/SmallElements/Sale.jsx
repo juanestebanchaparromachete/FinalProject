@@ -44,7 +44,7 @@ export default class Sale extends Component {
             if (error) {
                 console.log(error)
             }
-            else {S
+            else {
                 console.log('we good')
             }
         });
@@ -62,10 +62,8 @@ export default class Sale extends Component {
             // private: this.props.challenge.private,
         });
         return (
-            <div className="col-md-12 mb-12" height="700px !important">
-                <div className="card h-200">
-                    <div className="card-body">
-                        <img className="card-img-top" src={this.props.sale.thumbnail} width="200px"
+            <div className="col-md-12 mb-12" height="700px !important" align="middle">
+                        <img className="card-img-top" src={this.props.sale.thumbnail} width="300px"
                              alt="Imagen descriptiva proyecto"/>
                         <p className="card-text">{this.props.sale.description}</p>
                         <form id="contact" className="form" onSubmit={this.handleSubmit}>
@@ -102,8 +100,6 @@ export default class Sale extends Component {
                                 </fieldset>
                             </div>
                         </form>
-                    </div>
-                </div>
             </div>
         );
     }
