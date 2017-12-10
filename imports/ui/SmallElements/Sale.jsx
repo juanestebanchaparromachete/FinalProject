@@ -71,7 +71,7 @@ export default class Sale extends Component {
                                 <div className="col-md-4">
                                     <label >Choose product: </label>
                                     <br/>
-                                    <select value={this.state.prod}
+                                    <select value={this.state.prod} onClick={(event) => this.setState({prod: event.target.value})}
                                             onChange={(event) => this.setState({prod: event.target.value})}>
                                         {this.props.sale.products.map(function (listValue) {
                                             return (
