@@ -32,7 +32,7 @@ export default class Sale extends Component {
         quantities = [];
         for (i = 0; i < products.length; i++) {
             if (productoASumar == products[i]) {
-                quantities.push(this.state.quant);
+                quantities.push(Number(this.state.quant));
             } else {
                 quantities.push(0);
             }

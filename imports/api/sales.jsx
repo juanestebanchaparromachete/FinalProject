@@ -33,7 +33,9 @@ Meteor.methods({
         }
 
         //AGREGAR NUEVA VENTA
+        sale.value =Number(sale.value);
         console.log(sale);
+        console.log(check(Number(sale.value), Number));
         Sales.insert(sale);
     },
     'sales.remove'(saleId) {
