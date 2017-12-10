@@ -13,7 +13,7 @@ export default class Sale extends Component {
     this.state = {
       value: [],
       prod: '',
-      quant: 0,
+      quant:0,
       val: 0
 
     };
@@ -39,14 +39,7 @@ export default class Sale extends Component {
     }
     valueff = this.state.val;
     usernameff = Meteor.user().username;
-    venta = {
-      challengeId: challengeId,
-      userId: userId,
-      products: products,
-      quantities: quantities,
-      value: valueff,
-      userName: usernameff
-    }
+    venta = {challengeId: challengeId, userId: userId, products: products, quantities: quantities, value: valueff, userName:usernameff }
     Meteor.call('sales.add', venta, function (error, result) {
       if (error) {
         console.log(error)
@@ -76,9 +69,9 @@ export default class Sale extends Component {
         <form id="contact" className="form" onSubmit={this.handleSubmit}>
           <div className="row">
             <div className="col-md-4">
-              <label>Choose product: </label>
+              <label >Choose product: </label>
               <br/>
-              <select value={this.state.prod}
+              <select value={this.state.prod} onClick={(event) => this.setState({prod: event.target.value})}
                       onChange={(event) => this.setState({prod: event.target.value})}>
                 {this.props.sale.products.map(function (listValue) {
                   return (
@@ -87,13 +80,13 @@ export default class Sale extends Component {
               </select>
             </div>
             <div className="col-md-4">
-              <label>Insert quantity: </label>
+              <label >Insert quantity: </label>
               <input type="text" id="uname" name="name" value={this.state.quant}
                      onChange={(event) => this.setState({quant: event.target.value})}/>
             </div>
             <div className="col-md-4">
-              <label>Insert value: </label>
-              <input type="text" id="uname" name="name" value={this.state.val}
+              <label >Insert value: </label>
+              <input type="text" id="uname" name="name"value={this.state.val}
                      onChange={(event) => this.setState({val: event.target.value})}/>
             </div>
           </div>
