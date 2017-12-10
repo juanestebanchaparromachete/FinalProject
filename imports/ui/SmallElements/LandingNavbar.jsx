@@ -4,6 +4,7 @@ import {Meteor} from "meteor/meteor";
 import {createContainer} from 'meteor/react-meteor-data';
 import SweetAlert from 'react-bootstrap-sweetalert'
 import {Link} from 'react-router-dom';
+import FacebookLogin from '../SmallElements/FacebookLogin.jsx'
 
 class LandingNavbar extends Component {
 
@@ -214,6 +215,9 @@ class LandingNavbar extends Component {
                     </div>
                     <div className="group">
                       <input type="submit" className="button" value="Sign In"/>
+                    </div>
+                    <div className="group">
+                      <FacebookLogin/>
                     </div>
                   </form>
                   <form className="sign-up-htm" onSubmit={this.handleSignUpSubmit}>

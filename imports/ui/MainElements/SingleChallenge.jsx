@@ -142,10 +142,10 @@ class SingleChallenge extends Component {
 }
 
 
-  export default createContainer(() => {
-    Meteor.subscribe('sales', Session.get('challengeId'));
-    return {
-      sales: Sales.find({}, {sort: {createdAt: -1}}).fetch(),
-      currentUser: Meteor.user(),
-  };
-  }, SingleChallenge);
+export default createContainer(() => {
+  Meteor.subscribe('sales', Session.get('challengeId'));
+  return {
+    sales: Sales.find({}, {sort: {createdAt: -1}}).fetch(),
+    currentUser: Meteor.user(),
+};
+}, SingleChallenge);

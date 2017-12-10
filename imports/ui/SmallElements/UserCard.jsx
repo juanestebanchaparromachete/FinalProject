@@ -2,9 +2,10 @@ import React, {Component, PropTypes} from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 import { Session } from 'meteor/session'
+import {createContainer} from 'meteor/react-meteor-data';
 
 // Task component - represents a single todo item
-export default class UserCard extends Component {
+class UserCard extends Component {
 
   render() {
     const taskClassName = classnames({
@@ -27,3 +28,9 @@ export default class UserCard extends Component {
     );
   }
 }
+
+export default createContainer(() => {
+  return {
+    currentUser: Meteor.user(),
+  };
+}, UserCard);
