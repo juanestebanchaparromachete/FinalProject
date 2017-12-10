@@ -100,7 +100,7 @@ a:after {
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
 	color: #ffffff;
-	background-color: #74cfae;
+	background-color: #447b67;
 }
 
 .navbar-brand {
@@ -140,17 +140,17 @@ a:after {
 	font-size: 90px;
 	font-weight: 700;
 	letter-spacing: 3px;
-	color: #74cfae;
+	color: #468C6C;
 }
 
 #hello h2 {
-	color: #c0c0c0;
+	color: #838383;
 	font-weight: 400;
 }
 
 /* Green */
 #green {
-	background-color: #74cfae;
+	background-color: #468C6C;
 	padding-top: 80px;
     text-align: center !important;
 	margin-bottom: 0px;

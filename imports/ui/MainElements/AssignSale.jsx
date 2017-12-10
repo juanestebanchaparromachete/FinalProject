@@ -28,7 +28,7 @@ class AssignSale extends Component {
   renderProjects() {
     let filteredSales = this.props.sales;
     console.log('props sig');
-      console.log(this.props.sales);
+    console.log(this.props.sales);
       let currentChallenge = this.props.match.params.challenge;
     // if (this.state.hideCompleted) {
     //   filteredSales = filteredSales.filter(task => !task.checked);
