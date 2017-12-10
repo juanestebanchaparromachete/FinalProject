@@ -36,7 +36,14 @@ export default class Sale extends Component {
           }
         }
         venta = {challengeId:challengeId, userId:userId, products:products, quantities:quantities, value:350000}
-        Meteor.call('sales.add', venta);
+        Meteor.call('sales.add', venta, function (error, result) {
+          if (error) {
+            console.log(error)
+          }
+          else{
+            console.log('we good')
+          }
+        });
 
 
     }
