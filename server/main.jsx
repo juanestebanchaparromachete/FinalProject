@@ -2,7 +2,6 @@ import {Meteor} from 'meteor/meteor';
 import '/imports/api/tasks.jsx';
 import '/imports/api/challenges.jsx';
 import '/imports/api/users.jsx';
-import '/imports/api/products.jsx';
 import '/imports/api/sales.jsx';
 
 Meteor.startup(() => {

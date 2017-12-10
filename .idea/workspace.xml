@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f63686bf-6f18-489d-bdc8-ec94383abfba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx" afterPath="$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/Sale.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/Sale.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/FacebookLogin.jsx" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/imports/api/products.jsx" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.css" afterPath="$PROJECT_DIR$/client/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.html" afterPath="$PROJECT_DIR$/client/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/MainElements/SingleChallenge.jsx" afterPath="$PROJECT_DIR$/imports/ui/MainElements/SingleChallenge.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/UserCard.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/UserCard.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/main.jsx" afterPath="$PROJECT_DIR$/server/main.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.meteor/local/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,8 +31,10 @@
         <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3915">
-              <caret line="266" column="81" lean-forward="false" selection-start-line="266" selection-start-column="72" selection-end-line="266" selection-end-column="81" />
-              <folding />
+              <caret line="270" column="81" lean-forward="false" selection-start-line="270" selection-start-column="72" selection-end-line="270" selection-end-column="81" />
+              <folding>
+                <marker date="1512877018000" expanded="true" signature="6751:6780" ph="&lt;div/&gt;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -33,10 +42,13 @@
       <file leaf-file-name="main.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/main.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+            <state relative-caret-position="135">
+              <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
+                <marker date="1512877018000" expanded="true" signature="197:414" ph="{...}" />
+                <marker date="1512877018000" expanded="true" signature="242:410" ph="{...}" />
+                <marker date="1512877018000" expanded="true" signature="309:371" ph="{&quot;type&quot;: options.type...}" />
               </folding>
             </state>
           </provider>
@@ -47,18 +59,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="241">
               <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="products.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/api/products.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -126,13 +126,6 @@
       </file>
     </leaf>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>challen</find>
-      <find>challeng</find>
-      <find>challenge</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -183,7 +176,34 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FinalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FinalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FinalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FinalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
@@ -197,18 +217,7 @@
     <property name="js.meteor.project" value="true" />
     <property name="js.meteor.library.was.enabled" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="enabled" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -659,16 +668,16 @@
       <option name="presentableId" value="Default" />
       <updated>1512868637586</updated>
       <workItem from="1512868645253" duration="363000" />
-      <workItem from="1512869133254" duration="617000" />
+      <workItem from="1512869133254" duration="687000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8413000" />
+    <option name="totallyTimeSpent" value="8483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -684,7 +693,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.029308323" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -883,13 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1006,10 +1008,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/main.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        <state relative-caret-position="135">
+          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
+            <marker date="1512877018000" expanded="true" signature="197:414" ph="{...}" />
+            <marker date="1512877018000" expanded="true" signature="242:410" ph="{...}" />
+            <marker date="1512877018000" expanded="true" signature="309:371" ph="{&quot;type&quot;: options.type...}" />
           </folding>
         </state>
       </provider>
@@ -1025,8 +1030,10 @@
     <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3915">
-          <caret line="266" column="81" lean-forward="false" selection-start-line="266" selection-start-column="72" selection-end-line="266" selection-end-column="81" />
-          <folding />
+          <caret line="270" column="81" lean-forward="false" selection-start-line="270" selection-start-column="72" selection-end-line="270" selection-end-column="81" />
+          <folding>
+            <marker date="1512877018000" expanded="true" signature="6751:6780" ph="&lt;div/&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1062,9 +1069,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1093,6 +1098,14 @@
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

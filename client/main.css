@@ -461,12 +461,243 @@ li {
 }
 
 .user-card-body{
-    padding: 5px 5px 5px 5px;
+    /*padding: 5px 5px 5px 5px;*/
     background-color: transparent;
     text-align: center!important;
     border-style: solid;
-    max-height: 244px;
+    max-height: 370px;
     border-width: 4px;
     border-radius: 1px;
     border-color: white !important;
+    margin-bottom: 60px;
+}
+.user-card-text{
+    margin-bottom: 4px;
+}
+.numberSpan{
+    color: rgba(0,0,0,0.8);
+}
+
+/*----------------------------------------------------------------------------*/
+/*-----------------------------THIS IS THE FACEBOOK BTN CSS----------------------*/
+/*----------------------------------------------------------------------------*/
+
+.btn-social {
+    position: relative !important;
+    padding-left: 44px !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.btn-social > :first-child {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 32px !important;
+    line-height: 34px !important;
+    font-size: 1.6em !important;
+    text-align: center !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-social.btn-lg {
+    padding-left: 61px !important;
+}
+
+.btn-social.btn-lg > :first-child {
+    line-height: 45px !important;
+    width: 45px !important;
+    font-size: 1.8em !important;
+}
+
+.btn-social.btn-sm {
+    padding-left: 38px !important;
+}
+
+.btn-social.btn-sm > :first-child {
+    line-height: 28px !important;
+    width: 28px !important;
+    font-size: 1.4em !important;
+}
+
+.btn-social.btn-xs {
+    padding-left: 30px !important;
+}
+
+.btn-social.btn-xs > :first-child {
+    line-height: 20px !important;
+    width: 20px !important;
+    font-size: 1.2em !important;
+}
+
+.btn-social-icon {
+    position: relative !important;
+    padding-left: 44px !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    height: 34px !important;
+    width: 34px !important;
+    padding: 0 !important;
+}
+
+.btn-social-icon > :first-child {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 32px !important;
+    line-height: 34px !important;
+    font-size: 1.6em !important;
+    text-align: center !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-social-icon.btn-lg {
+    padding-left: 61px !important;
+}
+
+.btn-social-icon.btn-lg > :first-child {
+    line-height: 45px !important;
+    width: 45px !important;
+    font-size: 1.8em !important;
+}
+
+.btn-social-icon.btn-sm {
+    padding-left: 38px !important;
+}
+
+.btn-social-icon.btn-sm > :first-child {
+    line-height: 28px !important;
+    width: 28px !important;
+    font-size: 1.4em !important;
+}
+
+.btn-social-icon.btn-xs {
+    padding-left: 30px !important;
+}
+
+.btn-social-icon.btn-xs > :first-child {
+    line-height: 20px !important;
+    width: 20px !important;
+    font-size: 1.2em !important;
+}
+
+.btn-social-icon > :first-child {
+    border: none !important;
+    text-align: center !important;
+    width: 100%  !important;
+}
+
+.btn-social-icon.btn-lg {
+    height: 45px !important;
+    width: 45px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.btn-social-icon.btn-sm {
+    height: 30px !important;
+    width: 30px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.btn-social-icon.btn-xs {
+    height: 22px !important;
+    width: 22px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.btn-adn {
+    color: #fff !important;
+    background-color: #d87a68 !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-adn:focus, .btn-adn.focus {
+    color: #fff !important;
+    background-color: #ce563f !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-adn:hover {
+    color: #fff !important;
+    background-color: #ce563f !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-adn:active, .btn-adn.active, .open > .dropdown-toggle.btn-adn {
+    color: #fff !important;
+    background-color: #ce563f !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-adn:active:hover, .btn-adn.active:hover, .open > .dropdown-toggle.btn-adn:hover, .btn-adn:active:focus, .btn-adn.active:focus, .open > .dropdown-toggle.btn-adn:focus, .btn-adn:active.focus, .btn-adn.active.focus, .open > .dropdown-toggle.btn-adn.focus {
+    color: #fff !important;
+    background-color: #b94630 !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-adn:active, .btn-adn.active, .open > .dropdown-toggle.btn-adn {
+    background-image: none !important;
+}
+
+.btn-adn.disabled:hover, .btn-adn[disabled]:hover, fieldset[disabled] .btn-adn:hover, .btn-adn.disabled:focus, .btn-adn[disabled]:focus, fieldset[disabled] .btn-adn:focus, .btn-adn.disabled.focus, .btn-adn[disabled].focus, fieldset[disabled] .btn-adn.focus {
+    background-color: #d87a68 !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-adn .badge {
+    color: #d87a68 !important;
+    background-color: #fff !important;
+}
+
+.btn-facebook {
+    color: #fff !important;
+    background-color: #3b5998 !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-facebook:focus, .btn-facebook.focus {
+    color: #fff !important;
+    background-color: #2d4373 !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-facebook:hover {
+    color: #fff !important;
+    background-color: #2d4373 !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-facebook:active, .btn-facebook.active, .open > .dropdown-toggle.btn-facebook {
+    color: #fff !important;
+    background-color: #2d4373 !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-facebook:active:hover, .btn-facebook.active:hover, .open > .dropdown-toggle.btn-facebook:hover, .btn-facebook:active:focus, .btn-facebook.active:focus, .open > .dropdown-toggle.btn-facebook:focus, .btn-facebook:active.focus, .btn-facebook.active.focus, .open > .dropdown-toggle.btn-facebook.focus {
+    color: #fff !important;
+    background-color: #23345a !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-facebook:active, .btn-facebook.active, .open > .dropdown-toggle.btn-facebook {
+    background-image: none !important;
+}
+
+.btn-facebook.disabled:hover, .btn-facebook[disabled]:hover, fieldset[disabled] .btn-facebook:hover, .btn-facebook.disabled:focus, .btn-facebook[disabled]:focus, fieldset[disabled] .btn-facebook:focus, .btn-facebook.disabled.focus, .btn-facebook[disabled].focus, fieldset[disabled] .btn-facebook.focus {
+    background-color: #3b5998 !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.btn-facebook .badge {
+    color: #3b5998 !important;
+    background-color: #fff !important;
 }

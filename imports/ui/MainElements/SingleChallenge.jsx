@@ -24,46 +24,47 @@ class SingleChallenge extends Component {
 
   renderUsers() {
     let filteredSales = this.props.sales;
+    let usernameHash = {};
     let amountHash = {};
     let quantityHash = {};
     filteredSales.forEach(function (sale) {
       for (i = 0; i < sale.products.length; i++) {
         if (quantityHash[sale.userId] == undefined)
           quantityHash[sale.userId] = 0;
-        quantityHash[sale.userId] += sale.products[i];
+        quantityHash[sale.userId] += sale.quantities[i];
       }
-      if (amountHash[sale.userId] == undefined)
+      if (amountHash[sale.userId] == undefined) {
         amountHash[sale.userId] = 0;
+        usernameHash[sale.userId] = sale.userName;
+      }
       amountHash[sale.userId] += sale.value;
     })
     let finalArray = [];
     for (var key in amountHash) {
       if (amountHash.hasOwnProperty(key)) {
-        let obj = {};
-        obj[key]=amountHash[key];
-        finalArray.push(obj);
+        console.log(quantityHash[key])
+        finalArray.push({userId:key, value:amountHash[key], value2:quantityHash[key], userName: usernameHash[key]});
       }
     }
+    function compare(a, b) {
+      let comparison = 0;
+      if (a.value > b.value) {
+        comparison = -1;
+      } else if (a.value < b.value) {
+        comparison = 1;
+      }
+      return comparison;
+    }
     console.log(finalArray)
-    // finalArray.sort(function compare(a, b) {
-    //   if (a) {
-    //     return -1;
-    //   }
-    //   if (a is greater than b by the ordering criterion) {
-    //     return 1;
-    //   }
-    //   // a must be equal to b
-    //   return 0;
-    // })
-    return filteredSales.map((task, i) => {
-      const currentUserId = this.props.currentUser && this.props.currentUser._id;
-      // const showPrivateButton = task.owner === currentUserId;
-      // return (
-      //   <Comment
-      //     key={i}
-      //     comment={task}
-      //   />
-      // );
+    finalArray.sort(compare);
+    return finalArray.map((obj, i) => {
+      return (
+        <UserCard
+          index={i}
+          key={i}
+          info={obj}
+        />
+      );
     });
   }
 
@@ -141,10 +142,10 @@ class SingleChallenge extends Component {
 }
 
 
-  export default createContainer(() => {
-    Meteor.subscribe('sales', Session.get('challengeId'));
-    return {
-      sales: Sales.find({}, {sort: {createdAt: -1}}).fetch(),
-      currentUser: Meteor.user(),
-  };
-  }, SingleChallenge);
+export default createContainer(() => {
+  Meteor.subscribe('sales', Session.get('challengeId'));
+  return {
+    sales: Sales.find({}, {sort: {createdAt: -1}}).fetch(),
+    currentUser: Meteor.user(),
+};
+}, SingleChallenge);
