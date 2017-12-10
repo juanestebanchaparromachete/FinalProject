@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f63686bf-6f18-489d-bdc8-ec94383abfba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx" afterPath="$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/Sale.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/Sale.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/api/users.jsx" afterPath="$PROJECT_DIR$/imports/api/users.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.meteor/local/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -54,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LandingNavbar.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LandingNavbar.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="148" column="25" lean-forward="false" selection-start-line="148" selection-start-column="25" selection-end-line="148" selection-end-column="25" />
+            <state relative-caret-position="223">
+              <caret line="120" column="40" lean-forward="false" selection-start-line="120" selection-start-column="40" selection-end-line="120" selection-end-column="40" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -66,12 +65,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-16703">
-              <caret line="218" column="20" lean-forward="false" selection-start-line="218" selection-start-column="20" selection-end-line="218" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="-16618">
+              <caret line="223" column="20" lean-forward="false" selection-start-line="223" selection-start-column="20" selection-end-line="223" selection-end-column="20" />
+              <folding>
+                <marker date="1512879545423" expanded="true" signature="65955:65972" ph="..." />
+                <marker date="1512879545423" expanded="true" signature="65955:65990" ph="..." />
+                <marker date="1512879545423" expanded="true" signature="65955:66003" ph="..." />
+                <marker date="1512879545423" expanded="true" signature="65955:66018" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,8 +107,8 @@
       <file leaf-file-name="users.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/api/users.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="10" selection-end-column="8" />
+            <state relative-caret-position="323">
+              <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -160,7 +164,6 @@
       <find>to</find>
       <find>users.</find>
       <find>Account</find>
-      <find>Sweet</find>
       <find>facebookLogIn</find>
       <find>this</find>
       <find>hideal</find>
@@ -170,6 +173,9 @@
       <find>signups</find>
       <find>onRece</find>
       <find>face</find>
+      <find>HEAD</find>
+      <find>alert</find>
+      <find>Sweet</find>
     </findStrings>
     <replaceStrings>
       <replace>className=</replace>
@@ -196,9 +202,10 @@
         <option value="$PROJECT_DIR$/imports/ui/SmallElements/UserCard.jsx" />
         <option value="$PROJECT_DIR$/client/main.css" />
         <option value="$PROJECT_DIR$/client/main.html" />
-        <option value="$PROJECT_DIR$/imports/api/users.jsx" />
         <option value="$PROJECT_DIR$/server/main.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/SmallElements/FacebookLogin.jsx" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/imports/api/users.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" />
       </list>
     </option>
@@ -763,12 +770,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512868637586</updated>
-      <workItem from="1512868645253" duration="9227000" />
+      <workItem from="1512868645253" duration="10084000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16660000" />
+    <option name="totallyTimeSpent" value="17517000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="777" extended-state="6" />
@@ -1182,14 +1189,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/api/users.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="10" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/main.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1210,21 +1209,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="148" column="25" lean-forward="false" selection-start-line="148" selection-start-column="25" selection-end-line="148" selection-end-column="25" />
+        <state relative-caret-position="-16618">
+          <caret line="223" column="20" lean-forward="false" selection-start-line="223" selection-start-column="20" selection-end-line="223" selection-end-column="20" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <marker date="1512879545423" expanded="true" signature="65955:65972" ph="..." />
+            <marker date="1512879545423" expanded="true" signature="65955:65990" ph="..." />
+            <marker date="1512879545423" expanded="true" signature="65955:66003" ph="..." />
+            <marker date="1512879545423" expanded="true" signature="65955:66018" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/imports/api/users.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16703">
-          <caret line="218" column="20" lean-forward="false" selection-start-line="218" selection-start-column="20" selection-end-line="218" selection-end-column="20" />
+        <state relative-caret-position="323">
+          <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="120" column="40" lean-forward="false" selection-start-line="120" selection-start-column="40" selection-end-line="120" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

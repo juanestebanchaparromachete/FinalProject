@@ -23,6 +23,17 @@ Meteor.methods({
       username: text,
     }).fetch();
   },
+  'users.updateInvite'(inviteCode) {
+
+    // Make sure the user is logged in before inserting a challenge
+    if (! Meteor.userId()) {
+      throw new Meteor.Error('not-authorized');
+    }
+
+    return Meteor.users.update(this._id, {
+      $set: { invite: inviteCode },
+    });
+  },
   'users.findWithFacebookId'(facebookId) {
 
     return Meteor.users.find({

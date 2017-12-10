@@ -31,6 +31,7 @@ class LandingNavbar extends Component {
     this.handleSignUpSubmit = this.handleSignUpSubmit.bind(this);
     this.handleSignUpSubmit2 = this.handleSignUpSubmit2.bind(this);
     this.hideAlert = this.hideAlert.bind(this);
+    this.submitCode = this.submitCode.bind(this);
     this.changeLabel = this.changeLabel.bind(this);
     this.redirectBasedOnUserType = this.redirectBasedOnUserType.bind(this);
   }
@@ -38,6 +39,20 @@ class LandingNavbar extends Component {
   hideAlert() {
     this.setState({
       alert: null
+    });
+  }
+
+  submitCode(e) {
+    this.setState({
+      alert: null
+    });
+
+    Meteor.call('', e, function (error, result) {
+      if (error) {
+        console.log('bad business');
+      }
+      else {
+      }
     });
   }
 
@@ -98,7 +113,21 @@ class LandingNavbar extends Component {
     Meteor.loginWithPassword(this.state.username, this.state.password, (error) => {
       if (error) {
         console.log("SMTHNG WENT TERRIBLY WRONG")
+
         this.setState({modalIsOpen:false});
+        this.setState({
+          alert: <SweetAlert
+            input
+            closeOnClickOutside = {false}
+            cancelBtnBsStyle="default"
+            title="Invite code!"
+            inputPlaceHolder="Please enter your invite code"
+            onConfirm={this.submitCode}
+            onCancel={this.hideAlert}
+          >
+            Write something interesting:
+          </SweetAlert>
+        });
         b.forceUpdate();
         redirectBasedOnUserType();
         b.forceUpdate();
@@ -108,8 +137,8 @@ class LandingNavbar extends Component {
         b.forceUpdate();
         redirectBasedOnUserType();
         b.forceUpdate();
-
       }
+
     });
     this.forceUpdate();
   }
@@ -143,13 +172,11 @@ class LandingNavbar extends Component {
 
   handleLoginSubmit2(info) {
     let b = this;
-    console.log("HERE HERE HERE")
     Meteor.loginWithPassword(info.username, info.password, (error) => {
       if (error) {
         console.log(error)
       }
       else {
-        console.log('HERE')
         this.setState({modalIsOpen:false});
         b.forceUpdate();
         console.log(b.props)
