@@ -28,13 +28,15 @@ class AssignSale extends Component {
   renderProjects() {
     let filteredSales = this.props.sales;
     console.log('props sig');
-    let currentChallenge = this.props.match.params.challenge;
+      console.log(this.props.sales);
+      let currentChallenge = this.props.match.params.challenge;
     // if (this.state.hideCompleted) {
     //   filteredSales = filteredSales.filter(task => !task.checked);
     // }
     return filteredSales.map((sale) => {
       // const currentUserId = this.props.currentUser && this.props.currentUser._id;
       // const showPrivateButton = sale.owner === currentUserId;
+        console.log(sale);
         if(sale._id == currentChallenge)
         {
           this.props.currentChallenge = currentChallenge
@@ -89,6 +91,8 @@ class AssignSale extends Component {
 
 export default createContainer(() => {
   Meteor.subscribe('challenges');
+  console.log('container');
+  console.log(Challenges.find({}, {sort: {createdAt: -1}}).fetch());
   return {
     sales: Challenges.find({}, {sort: {createdAt: -1}}).fetch(),
     currentUser: Meteor.user(),
