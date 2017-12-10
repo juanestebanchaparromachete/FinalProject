@@ -6,9 +6,9 @@ import { check } from 'meteor/check';
 
 if (Meteor.isServer) {
   // This code only runs on the server
-  Meteor.publish('users', function challengePublication() {
-    return Users.find({});
-  });
+  // Meteor.publish('users', function challengePublication() {
+  //   return Users.find({});
+  // });
 }
 
 Meteor.methods({
@@ -21,6 +21,12 @@ Meteor.methods({
 
     return Meteor.users.find({
       username: text,
+    }).fetch();
+  },
+  'users.findWithFacebookId'(facebookId) {
+
+    return Meteor.users.find({
+      facebookId: facebookId,
     }).fetch();
   }
 });
