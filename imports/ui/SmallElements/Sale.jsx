@@ -46,6 +46,7 @@ export default class Sale extends Component {
             }
             else {
                 console.log('we good')
+                confirm('The sale of the product '+productoASumar +' has been registered to '+usernameff);
             }
         });
   }
