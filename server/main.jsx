@@ -8,6 +8,7 @@ Meteor.startup(() => {
   Accounts.onCreateUser((options, user) => {
     console.log('HERE')
     const customizedUser = Object.assign({
+      facebookId : options.facebookId,
       type: options.type,
       invite :options.invite
     }, user);

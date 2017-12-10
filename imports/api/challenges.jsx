@@ -7,9 +7,8 @@ export const Challenges = new Mongo.Collection('challenges');
 
 if (Meteor.isServer) {
   // This code only runs on the server
-  Meteor.publish('challenges', function challengePublication() {
-    console.log(Challenges.find({}).fetch())
-    return Challenges.find({});
+  Meteor.publish('challenges', function challengePublication(userId) {
+    return Challenges.find({invite:Meteor.user().invite});
   });
 }
 
@@ -20,7 +19,7 @@ Meteor.methods({
     if (! Meteor.userId()) {
       throw new Meteor.Error('not-authorized');
     }
-
+    challenge.invite = Meteor.user().invite;
     return Challenges.insert(challenge);
   },
   'challenges.remove'(challengeId) {

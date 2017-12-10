@@ -20,15 +20,18 @@ class LandingNavbar extends Component {
       sUserId: '',
       sPassword: '',
       sInvite: '',
-      alert: null,
+        alert: null,
       redirect: null
     };
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.handleLoginSubmit = this.handleLoginSubmit.bind(this);
+    this.handleLoginSubmit2 = this.handleLoginSubmit2.bind(this);
     this.handleSignUpSubmit = this.handleSignUpSubmit.bind(this);
+    this.handleSignUpSubmit2 = this.handleSignUpSubmit2.bind(this);
     this.hideAlert = this.hideAlert.bind(this);
+    this.submitCode = this.submitCode.bind(this);
     this.changeLabel = this.changeLabel.bind(this);
     this.redirectBasedOnUserType = this.redirectBasedOnUserType.bind(this);
   }
@@ -36,6 +39,20 @@ class LandingNavbar extends Component {
   hideAlert() {
     this.setState({
       alert: null
+    });
+  }
+
+  submitCode(e) {
+    this.setState({
+      alert: null
+    });
+
+    Meteor.call('', e, function (error, result) {
+      if (error) {
+        console.log('bad business');
+      }
+      else {
+      }
     });
   }
 
@@ -80,6 +97,52 @@ class LandingNavbar extends Component {
     console.log('test')
   }
 
+  handleSignUpSubmit2(info) {
+    let b = this;
+    let options = {
+      username: info.username,
+      password: info.password,
+      type: 'SELLER',
+      invite: info.invite,
+      facebookId: info.facebookId
+    }
+    Accounts.createUser(options, {
+      password: info.password,
+      username: info.username
+    });
+    Meteor.loginWithPassword(this.state.username, this.state.password, (error) => {
+      if (error) {
+        console.log("SMTHNG WENT TERRIBLY WRONG")
+
+        this.setState({modalIsOpen:false});
+        this.setState({
+          alert: <SweetAlert
+            input
+            closeOnClickOutside = {false}
+            cancelBtnBsStyle="default"
+            title="Invite code!"
+            inputPlaceHolder="Please enter your invite code"
+            onConfirm={this.submitCode}
+            onCancel={this.hideAlert}
+          >
+            Write something interesting:
+          </SweetAlert>
+        });
+        b.forceUpdate();
+        redirectBasedOnUserType();
+        b.forceUpdate();
+      }
+      else {
+        this.setState({modalIsOpen:false});
+        b.forceUpdate();
+        redirectBasedOnUserType();
+        b.forceUpdate();
+      }
+
+    });
+    this.forceUpdate();
+  }
+
   handleLoginSubmit(event) {
     event.preventDefault();
     let b = this;
@@ -98,6 +161,22 @@ class LandingNavbar extends Component {
       }
       else {
         console.log('HERE')
+        this.setState({modalIsOpen:false});
+        b.forceUpdate();
+        console.log(b.props)
+        redirectBasedOnUserType();
+        b.forceUpdate();
+      }
+    })
+  }
+
+  handleLoginSubmit2(info) {
+    let b = this;
+    Meteor.loginWithPassword(info.username, info.password, (error) => {
+      if (error) {
+        console.log(error)
+      }
+      else {
         this.setState({modalIsOpen:false});
         b.forceUpdate();
         console.log(b.props)
@@ -217,7 +296,7 @@ class LandingNavbar extends Component {
                       <input type="submit" className="button" value="Sign In"/>
                     </div>
                     <div className="group">
-                      <FacebookLogin/>
+                      <FacebookLogin loginFunction={this.handleLoginSubmit2} signupFunction={this.handleSignUpSubmit2}/>
                     </div>
                   </form>
                   <form className="sign-up-htm" onSubmit={this.handleSignUpSubmit}>

@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f63686bf-6f18-489d-bdc8-ec94383abfba" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/api/sales.jsx" afterPath="$PROJECT_DIR$/imports/api/sales.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx" afterPath="$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/Sale.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/Sale.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/api/challenges.jsx" afterPath="$PROJECT_DIR$/imports/api/challenges.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/api/users.jsx" afterPath="$PROJECT_DIR$/imports/api/users.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx" afterPath="$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/FacebookLogin.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/FacebookLogin.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/main.jsx" afterPath="$PROJECT_DIR$/server/main.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.meteor/local/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -671,16 +674,16 @@
       <option name="presentableId" value="Default" />
       <updated>1512868637586</updated>
       <workItem from="1512868645253" duration="363000" />
-      <workItem from="1512869133254" duration="7066000" />
+      <workItem from="1512869133254" duration="7109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14862000" />
+    <option name="totallyTimeSpent" value="14905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -696,7 +699,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.029308323" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
