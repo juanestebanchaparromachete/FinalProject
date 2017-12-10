@@ -128,7 +128,7 @@ class SingleChallenge extends Component {
               </div>
             </div>
           </div>
-          <Link to={{pathname: '/sale/' + this.state.challenge._id+'/sales'}} className="btn btn-primary moreInfoButton">Add sales</Link>
+          <Link to={{pathname: '/sale/' + this.state.challenge._id+'/sales'}} className="btn btn-warning ">Assign sales</Link>
         </div>
         <div className="container">
           <div className="row centered mt grid">
