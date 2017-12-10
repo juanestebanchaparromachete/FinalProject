@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 import Navbar from '../SmallElements/Navbar.jsx'
 import { Sales } from "../../api/sales.jsx";
+import { Challenges } from "../../api/challenges.jsx";
 import Sale from "../SmallElements/Sale.jsx";
 import LandingNavbar from "../SmallElements/LandingNavbar";
 import {Redirect} from 'react-router';
@@ -26,19 +27,23 @@ class AssignSale extends Component {
 
   renderProjects() {
     let filteredSales = this.props.sales;
+    console.log('props sig');
+    let currentChallenge = this.props.match.params.challenge;
     // if (this.state.hideCompleted) {
     //   filteredSales = filteredSales.filter(task => !task.checked);
     // }
     return filteredSales.map((sale) => {
       // const currentUserId = this.props.currentUser && this.props.currentUser._id;
       // const showPrivateButton = sale.owner === currentUserId;
-
+        if(sale._id == currentChallenge)
+        {
       return (
         <Sale
           key={sale._id}
           sale={sale}
         />
-      );
+      )};
+        return "";
     });
   }
 
@@ -77,9 +82,9 @@ class AssignSale extends Component {
 }
 
 export default createContainer(() => {
-  Meteor.subscribe('sales');
+  Meteor.subscribe('challenges');
   return {
-    sales: Sales.find({}, {sort: {createdAt: -1}}).fetch(),
+    sales: Challenges.find({}, {sort: {createdAt: -1}}).fetch(),
     currentUser: Meteor.user(),
   };
 }, AssignSale);

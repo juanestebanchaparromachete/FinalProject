@@ -26,19 +26,15 @@ class ChallengesList extends Component {
 
   renderProjects() {
     let filteredChallenges = this.props.challenges;
-    // if (this.state.hideCompleted) {
-    //   filteredChallenges = filteredChallenges.filter(task => !task.checked);
-    // }
+    // console.log(filteredChallenges);
     return filteredChallenges.map((challenge) => {
-      // const currentUserId = this.props.currentUser && this.props.currentUser._id;
-      // const showPrivateButton = challenge.owner === currentUserId;
-
-      return (
-        <Challenge
-          key={challenge._id}
-          challenge={challenge}
-        />
-      );
+      if (challenge._id)
+        return (
+          <Challenge
+            key={challenge._id}
+            challenge={challenge}
+          />
+        );
     });
   }
 

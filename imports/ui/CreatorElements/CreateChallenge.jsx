@@ -57,27 +57,45 @@ class CreateChallenge extends Component {
     let newChallenge = {
       name: this.state.name,
       description: this.state.description,
-      keyWords: this.state.keyWords,
+      keyWords: this.state.keyWords.split(','),
       products: this.state.value
     }
     let b = this;
-    Meteor.call('challenges.insert', newChallenge, function (error, result) {
-      if (error) {
-        console.log(error)
-        b.setState({
-          alert:
-          <SweetAlert
-            title={<span>ERROR</span>}
-            onConfirm={this.hideAlert}
-            >
-            {/*<span>The passwords <span style={{color: '#F8BB86'}}>do not match</span></span>*/}
-          </SweetAlert>
-        });
+    let searchParam = '';
+    for (i = 0; i < newChallenge.keyWords.length; i++) {
+      let t = newChallenge.keyWords[i].split(' ');
+      let temp = ''
+      for (j = 0; j < t.length; j++) {
+        temp += t[j];
+        if (j != t.length - 1)
+          temp += "-";
       }
-      else{
-        b.setState({redirect: true});
-      }
-    });
+      searchParam += temp;
+      if (i != newChallenge.keyWords.length - 1)
+        searchParam += "%20";
+    }
+    let url = "https://www.googleapis.com/customsearch/v1?q="+searchParam+"&cx=009540301129484155775%3Aipvuwikdgdg&imgColorType=color&imgSize=medium&key=AIzaSyA5iFnQCml3976FMNAcFEF-vnsXClgK2B4";
+    axios.get(url,
+    ).then(response => {
+      newChallenge.thumbnail = response.data.items[0].pagemap.metatags[0]['og:image'];
+      Meteor.call('challenges.insert', newChallenge, function (error, result) {
+        if (error) {
+          console.log(error)
+          b.setState({
+            alert:
+              <SweetAlert
+                title={<span>ERROR</span>}
+                onConfirm={this.hideAlert}
+              >
+                {/*<span>The passwords <span style={{color: '#F8BB86'}}>do not match</span></span>*/}
+              </SweetAlert>
+          });
+        }
+        else{
+          b.setState({redirect: true});
+        }
+      });
+    })
   }
 
   addClick() {

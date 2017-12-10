@@ -451,3 +451,17 @@ li {
 #loginFormLanding .button{
     color: white !important;
 }
+
+/*----------------------------------------------------------------------------*/
+/*-----------------------------THIS IS THE CHALLENGE FORM CS----------------------*/
+/*----------------------------------------------------------------------------*/
+
+.card-body{
+    background-color: transparent;
+    text-align: center!important;
+    border-style: solid;
+    max-height: 244px;
+    border-width: 4px;
+    border-radius: 1px;
+    border-color: white !important;
+}
