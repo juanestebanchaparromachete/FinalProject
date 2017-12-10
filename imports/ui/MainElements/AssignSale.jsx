@@ -65,17 +65,11 @@ class AssignSale extends Component {
         <LandingNavbar/>
         <div className="row my-4">
           <div className="container">
-            <h1>Products</h1>
-            <h1>Products</h1><h1>Products</h1>
-            <h1>Products</h1>
-            <h1>Products</h1>
-            <h1>Products</h1>
-            <h1>Products</h1>
-            <h1>Products</h1>
-            <h1>Products</h1>
-            <h1>Products</h1>
-            <h1>Products</h1>
-
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <h1>Assign sale</h1>
 
           </div>
 

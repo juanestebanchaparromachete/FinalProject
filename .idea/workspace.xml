@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f63686bf-6f18-489d-bdc8-ec94383abfba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/api/users.jsx" afterPath="$PROJECT_DIR$/imports/api/users.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/FacebookLogin.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/FacebookLogin.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/main.jsx" afterPath="$PROJECT_DIR$/server/main.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx" afterPath="$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/Sale.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/Sale.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.meteor/local/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -55,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LandingNavbar.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LandingNavbar.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="261">
@@ -63,6 +62,16 @@
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-16703">
+              <caret line="218" column="20" lean-forward="false" selection-start-line="218" selection-start-column="20" selection-end-line="218" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,10 +113,19 @@
       <file leaf-file-name="AssignSale.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+            <state relative-caret-position="263">
+              <caret line="71" column="32" lean-forward="false" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
+                <marker date="1512878661748" expanded="true" signature="564:2231" ph="{...}" />
+                <marker date="1512878661748" expanded="true" signature="1720:2229" ph="{...}" />
+                <marker date="1512878661748" expanded="true" signature="1741:2218" ph="&lt;div/&gt;" />
+                <marker date="1512878661748" expanded="true" signature="1851:2054" ph="&lt;div/&gt;" />
+                <marker date="1512878661748" expanded="true" signature="1888:2038" ph="&lt;div/&gt;" />
+                <marker date="1512878661748" expanded="true" signature="2063:2205" ph="&lt;div/&gt;" />
+                <marker date="1512878661748" expanded="true" signature="2118:2190" ph="&lt;div/&gt;" />
+                <marker date="1512878661748" expanded="true" signature="2270:2420" ph="{...}" />
+                <marker date="1512878661748" expanded="true" signature="2315:2417" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -117,21 +135,11 @@
         <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/Sale.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
-              <caret line="29" column="149" lean-forward="false" selection-start-line="29" selection-start-column="149" selection-end-line="29" selection-end-column="153" />
+              <caret line="30" column="151" lean-forward="false" selection-start-line="30" selection-start-column="151" selection-end-line="30" selection-end-column="155" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="challenges.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/api/challenges.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <marker date="1512878661753" expanded="true" signature="550:1388" ph="&lt;div/&gt;" />
+                <marker date="1512878661753" expanded="true" signature="1089:1371" ph="&lt;div/&gt;" />
               </folding>
             </state>
           </provider>
@@ -160,8 +168,8 @@
       <find>sUserId</find>
       <find>Facebook</find>
       <find>signups</find>
-      <find>face</find>
       <find>onRece</find>
+      <find>face</find>
     </findStrings>
     <replaceStrings>
       <replace>className=</replace>
@@ -229,6 +237,11 @@
             <path>
               <item name="FinalProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="FinalProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalProject" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FinalProject" type="b2602c69:ProjectViewProjectNode" />
@@ -750,12 +763,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512868637586</updated>
-      <workItem from="1512868645253" duration="9163000" />
+      <workItem from="1512868645253" duration="9227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16596000" />
+    <option name="totallyTimeSpent" value="16660000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="777" extended-state="6" />
@@ -963,14 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1073,9 +1078,11 @@
     <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/Sale.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
-          <caret line="29" column="149" lean-forward="false" selection-start-line="29" selection-start-column="149" selection-end-line="29" selection-end-column="153" />
+          <caret line="30" column="151" lean-forward="false" selection-start-line="30" selection-start-column="151" selection-end-line="30" selection-end-column="155" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
+            <marker date="1512878661753" expanded="true" signature="550:1388" ph="&lt;div/&gt;" />
+            <marker date="1512878661753" expanded="true" signature="1089:1371" ph="&lt;div/&gt;" />
           </folding>
         </state>
       </provider>
@@ -1098,10 +1105,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="263">
+          <caret line="71" column="32" lean-forward="false" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
+            <marker date="1512878661748" expanded="true" signature="564:2231" ph="{...}" />
+            <marker date="1512878661748" expanded="true" signature="1720:2229" ph="{...}" />
+            <marker date="1512878661748" expanded="true" signature="1741:2218" ph="&lt;div/&gt;" />
+            <marker date="1512878661748" expanded="true" signature="1851:2054" ph="&lt;div/&gt;" />
+            <marker date="1512878661748" expanded="true" signature="1888:2038" ph="&lt;div/&gt;" />
+            <marker date="1512878661748" expanded="true" signature="2063:2205" ph="&lt;div/&gt;" />
+            <marker date="1512878661748" expanded="true" signature="2118:2190" ph="&lt;div/&gt;" />
+            <marker date="1512878661748" expanded="true" signature="2270:2420" ph="{...}" />
+            <marker date="1512878661748" expanded="true" signature="2315:2417" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1201,6 +1217,14 @@
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16703">
+          <caret line="218" column="20" lean-forward="false" selection-start-line="218" selection-start-column="20" selection-end-line="218" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

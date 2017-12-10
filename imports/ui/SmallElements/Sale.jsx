@@ -27,7 +27,8 @@ export default class Sale extends Component {
             </div>
             <br/>
             <div className="row">
-            <Link onClick={() => Session.set('projectId', this.props.sale._id)} to={{pathname: '/sales/id/' + this.props.sale._id, query: this.props.sale}} className="btn btn-primary moreInfoButton">Asignar venta</Link>
+              <br/>
+              <Link onClick={() => Session.set('projectId', this.props.sale._id)} to={{pathname: '/sales/id/' + this.props.sale._id, query: this.props.sale}} className="btn btn-primary moreInfoButton">Asignar venta</Link>
             </div>
           </div>
         </div>
