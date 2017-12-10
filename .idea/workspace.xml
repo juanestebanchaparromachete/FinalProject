@@ -687,12 +687,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512868637586</updated>
-      <workItem from="1512868645253" duration="11568000" />
+      <workItem from="1512868645253" duration="11583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19001000" />
+    <option name="totallyTimeSpent" value="19016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="777" extended-state="6" />
@@ -1054,10 +1054,10 @@
         <state relative-caret-position="-16669">
           <caret line="220" column="20" lean-forward="false" selection-start-line="220" selection-start-column="20" selection-end-line="220" selection-end-column="20" />
           <folding>
-            <marker date="1512881033208" expanded="true" signature="60544:60561" ph="..." />
-            <marker date="1512881033208" expanded="true" signature="60544:60579" ph="..." />
-            <marker date="1512881033208" expanded="true" signature="60544:60592" ph="..." />
-            <marker date="1512881033208" expanded="true" signature="60544:60607" ph="..." />
+            <marker date="1512881033853" expanded="true" signature="60544:60561" ph="..." />
+            <marker date="1512881033853" expanded="true" signature="60544:60579" ph="..." />
+            <marker date="1512881033853" expanded="true" signature="60544:60592" ph="..." />
+            <marker date="1512881033853" expanded="true" signature="60544:60607" ph="..." />
           </folding>
         </state>
       </provider>
