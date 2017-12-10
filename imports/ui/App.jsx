@@ -70,9 +70,10 @@ class App extends Component {
             <Route exact path="/" component={MainRedirect}/>
             <Route exact path="/main" component={LandingPage}/>
             <Route exact path="/challenges" component={ChallengesList}/>
+            <Route path="/sale/:challenge/sales" component={AssignSale}/>
             <Route path="/challenges/:name" component={SingleChallenge}/>
             <Route exact path="/publish" component={CreateChallenge}/>
-            <Route exact path="/challenges/:challenge/sales" component={AssignSale}/>
+            <Route path="/challenges/:challenge/sales" component={AssignSale}/>
             <Route exact path="/error" component={NotFound}/>
           </div>
         </Router>

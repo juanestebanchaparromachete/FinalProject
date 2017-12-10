@@ -61,11 +61,22 @@ class AssignSale extends Component {
   render() {
     return (
       <div>
-        { Meteor.userId() ? null : <Redirect push to="/main"/> }
+        {/*{ Meteor.userId() ? null : <Redirect push to="/main"/> }*/}
         <LandingNavbar/>
         <div className="row my-4">
           <div className="container">
             <h1>Products</h1>
+            <h1>Products</h1><h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+            <h1>Products</h1>
+
+
           </div>
 
         </div>

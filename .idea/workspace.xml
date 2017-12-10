@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f63686bf-6f18-489d-bdc8-ec94383abfba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FinalProject.iml" afterPath="$PROJECT_DIR$/FinalProject.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/api/sales.jsx" afterPath="$PROJECT_DIR$/imports/api/sales.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/App.jsx" afterPath="$PROJECT_DIR$/imports/ui/App.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx" afterPath="$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx" afterPath="$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/SmallElements/Sale.jsx" afterPath="$PROJECT_DIR$/imports/ui/SmallElements/Sale.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/main.jsx" afterPath="$PROJECT_DIR$/server/main.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.meteor/local/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,20 +19,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Navbar.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/Navbar.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="86" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LandingNavbar.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4437">
+            <state relative-caret-position="257">
               <caret line="266" column="81" lean-forward="false" selection-start-line="266" selection-start-column="72" selection-end-line="266" selection-end-column="81" />
               <folding />
             </state>
@@ -57,10 +41,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sales.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sales.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/api/sales.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
+            <state relative-caret-position="241">
               <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -81,22 +65,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/App.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="49" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="49" />
-              <folding />
+            <state relative-caret-position="387">
+              <caret line="72" column="30" lean-forward="false" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+              <folding>
+                <element signature="e#480#543#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LandingPage.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/LandingPage.jsx">
+      <file leaf-file-name="SingleChallenge.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/SingleChallenge.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="-568">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,8 +92,8 @@
       <file leaf-file-name="AssignSale.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+            <state relative-caret-position="365">
+              <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -160,11 +148,11 @@
         <option value="$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx" />
         <option value="$PROJECT_DIR$/imports/api/challenges.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx" />
-        <option value="$PROJECT_DIR$/imports/ui/App.jsx" />
-        <option value="$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/SmallElements/Sale.jsx" />
         <option value="$PROJECT_DIR$/server/main.jsx" />
         <option value="$PROJECT_DIR$/imports/api/sales.jsx" />
+        <option value="$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx" />
+        <option value="$PROJECT_DIR$/imports/ui/App.jsx" />
       </list>
     </option>
   </component>
@@ -213,6 +201,25 @@
               <item name="FinalProject" type="462c0819:PsiDirectoryNode" />
               <item name="imports" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalProject" type="462c0819:PsiDirectoryNode" />
+              <item name="imports" type="462c0819:PsiDirectoryNode" />
+              <item name="startup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalProject" type="462c0819:PsiDirectoryNode" />
+              <item name="imports" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FinalProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FinalProject" type="462c0819:PsiDirectoryNode" />
+              <item name="imports" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="MainElements" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -684,12 +691,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512868637586</updated>
-      <workItem from="1512868645253" duration="55000" />
+      <workItem from="1512868645253" duration="363000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7488000" />
+    <option name="totallyTimeSpent" value="7796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="777" extended-state="6" />
@@ -741,16 +748,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/Sale.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="149" lean-forward="false" selection-start-line="29" selection-start-column="149" selection-end-line="29" selection-end-column="153" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/Navbar.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -823,7 +820,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding />
+          <folding>
+            <element signature="e#480#543#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -948,6 +947,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,14 +1005,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/Navbar.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/api/users.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1038,32 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4437">
-          <caret line="266" column="81" lean-forward="false" selection-start-line="266" selection-start-column="72" selection-end-line="266" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/api/products.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/App.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="49" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/CreatorElements/CreateChallenge.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -1078,24 +1044,6 @@
           <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/LandingPage.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1122,10 +1070,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/api/sales.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
+        <state relative-caret-position="241">
           <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/Navbar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="266" column="81" lean-forward="false" selection-start-line="266" selection-start-column="72" selection-end-line="266" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/LandingPage.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/SingleChallenge.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-568">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/api/products.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/MainElements/AssignSale.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="72" column="30" lean-forward="false" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+          <folding>
+            <element signature="e#480#543#0" expanded="true" />
           </folding>
         </state>
       </provider>
