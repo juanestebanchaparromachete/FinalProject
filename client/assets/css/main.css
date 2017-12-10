@@ -151,13 +151,15 @@ a:after {
 /* Green */
 #green {
 	background-color: #74cfae;
-	padding-top: 50px;
+	padding-top: 80px;
+    text-align: center !important;
 	margin-bottom: 0px;
 }
 
 #green h3 {
 	color: white;
-	font-weight: 400;
+	font-weight: 700;
+	font-size: 45px;
 	margin-bottom: 35px;
 }
 

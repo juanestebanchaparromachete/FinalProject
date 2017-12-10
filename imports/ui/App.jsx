@@ -11,6 +11,7 @@ import ChallengesList from './MainElements/ChallengesList.jsx';
 import CreateChallenge from './CreatorElements/CreateChallenge.jsx';
 import LandingPage from './MainElements/LandingPage.jsx'
 import AssignSale from './MainElements/AssignSale.jsx';
+import SingleChallenge from './MainElements/SingleChallenge.jsx';
 
 
 const browserHistory = createBrowserHistory();
@@ -69,6 +70,7 @@ class App extends Component {
             <Route exact path="/" component={MainRedirect}/>
             <Route exact path="/main" component={LandingPage}/>
             <Route exact path="/challenges" component={ChallengesList}/>
+            <Route path="/challenges/:name" component={SingleChallenge}/>
             <Route exact path="/publish" component={CreateChallenge}/>
             <Route exact path="/challenges/:challenge/sales" component={AssignSale}/>
             <Route exact path="/error" component={NotFound}/>
