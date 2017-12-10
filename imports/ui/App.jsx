@@ -72,7 +72,7 @@ class App extends Component {
             <Route exact path="/challenges" component={ChallengesList}/>
             <Route path="/challenges/:name" component={SingleChallenge}/>
             <Route exact path="/publish" component={CreateChallenge}/>
-            <Route exact path="/sales" component={AssignSale}/>
+            <Route exact path="/challenges/:challenge/sales" component={AssignSale}/>
             <Route exact path="/error" component={NotFound}/>
           </div>
         </Router>

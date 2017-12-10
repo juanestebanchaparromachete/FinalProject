@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import {Meteor} from 'meteor/meteor';
 import Navbar from '../SmallElements/Navbar.jsx'
 import { Sales } from "../../api/sales.jsx";
+import { Challenges } from "../../api/challenges.jsx";
 import Sale from "../SmallElements/Sale.jsx";
 import LandingNavbar from "../SmallElements/LandingNavbar";
 import {Redirect} from 'react-router';
@@ -25,20 +26,24 @@ class AssignSale extends Component {
   }
 
   renderProjects() {
-    let filteredChallenges = this.props.sales;
+    let filteredSales = this.props.sales;
+    console.log('props sig');
+    let currentChallenge = this.props.match.params.challenge;
     // if (this.state.hideCompleted) {
-    //   filteredChallenges = filteredChallenges.filter(task => !task.checked);
+    //   filteredSales = filteredSales.filter(task => !task.checked);
     // }
-    return filteredChallenges.map((sale) => {
+    return filteredSales.map((sale) => {
       // const currentUserId = this.props.currentUser && this.props.currentUser._id;
-      // const showPrivateButton = challenge.owner === currentUserId;
-
+      // const showPrivateButton = sale.owner === currentUserId;
+        if(sale._id == currentChallenge)
+        {
       return (
         <Sale
           key={sale._id}
-          challenge={sale}
+          sale={sale}
         />
-      );
+      )};
+        return "";
     });
   }
 
@@ -48,7 +53,7 @@ class AssignSale extends Component {
     // Find the text field via the React ref
     const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
 
-    Meteor.call('sale.insert', text);
+    Meteor.call('sales.insert', text);
     // Clear form
     ReactDOM.findDOMNode(this.refs.textInput).value = '';
   }
@@ -71,16 +76,15 @@ class AssignSale extends Component {
           {this.renderProjects()}
           </div>
         </div>
-
       </div>
     );
   }
 }
 
 export default createContainer(() => {
-  Meteor.subscribe('sales');
+  Meteor.subscribe('challenges');
   return {
-    sales: Sales.find({}, {sort: {createdAt: -1}}).fetch(),
+    sales: Challenges.find({}, {sort: {createdAt: -1}}).fetch(),
     currentUser: Meteor.user(),
   };
 }, AssignSale);

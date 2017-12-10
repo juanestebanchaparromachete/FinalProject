@@ -15,43 +15,38 @@ if (Meteor.isServer) {
 }
 
 Meteor.methods({
-  'sales.insert'(text) {
-    check(text, String);
+    'sales.insert'(sale) {
+        // Make sure the user is logged in before inserting a challenge
+        if (! Meteor.userId()) {
+            throw new Meteor.Error('not-authorized');
+        }
+        sale.createdAt = new Date();
+        sale.owner = Meteor.userId();
+        sale.username = Meteor.user().username;
+        Sales.insert(sale);
+    },
+    'sales.remove'(saleId) {
+        check(saleId, String);
 
-    // Make sure the user is logged in before inserting a challenge
-    if (! Meteor.userId()) {
-      throw new Meteor.Error('not-authorized');
-    }
+        Sales.remove(saleId);
+    },
+    'sales.setChecked'(saleId, setChecked) {
+        check(saleId, String);
+        check(setChecked, Boolean);
 
-    Sales.insert({
-      text,
-      createdAt: new Date(),
-      owner: Meteor.userId(),
-      username: Meteor.user().username,
-    });
-  },
-  'sales.remove'(saleId) {
-    check(saleId, String);
+        Sales.update(saleId, { $set: { checked: setChecked } });
+    },
+    'sales.setPrivate'(saleId, setToPrivate) {
+        check(saleId, String);
+        check(setToPrivate, Boolean);
 
-    Sales.remove(saleId);
-  },
-  'sales.setChecked'(saleId, setChecked) {
-    check(saleId, String);
-    check(setChecked, Boolean);
+        const sale = Sales.findOne(saleId);
 
-    Sales.update(saleId, { $set: { checked: setChecked } });
-  },
-  'sales.setPrivate'(saleId, setToPrivate) {
-    check(saleId, String);
-    check(setToPrivate, Boolean);
+        // Make sure only the challenge owner can make a challenge private
+        if (sale.owner !== Meteor.userId()) {
+            throw new Meteor.Error('not-authorized');
+        }
 
-    const sale = Sales.findOne(saleId);
-
-    // Make sure only the challenge owner can make a challenge private
-    if (sale.owner !== Meteor.userId()) {
-      throw new Meteor.Error('not-authorized');
-    }
-
-    Sales.update(saleId, { $set: { private: setToPrivate } });
-  },
+        Sales.update(saleId, { $set: { private: setToPrivate } });
+    },
 });

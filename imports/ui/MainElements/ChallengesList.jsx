@@ -67,7 +67,6 @@ class ChallengesList extends Component {
           {this.renderProjects()}
           </div>
         </div>
-
       </div>
     );
   }
