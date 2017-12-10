@@ -27,6 +27,7 @@ class SingleChallenge extends Component {
     let usernameHash = {};
     let amountHash = {};
     let quantityHash = {};
+    console.log(filteredSales)
     filteredSales.forEach(function (sale) {
       for (i = 0; i < sale.products.length; i++) {
         if (quantityHash[sale.userId] == undefined)
