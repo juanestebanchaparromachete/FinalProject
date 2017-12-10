@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f63686bf-6f18-489d-bdc8-ec94383abfba" name="Default" comment="" />
+    <list default="true" id="f63686bf-6f18-489d-bdc8-ec94383abfba" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.html" afterPath="$PROJECT_DIR$/client/main.html" />
+    </list>
     <ignored path="$PROJECT_DIR$/.meteor/local/" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,7 +42,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="challenges.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/main.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="challenges.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/api/challenges.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="311">
@@ -104,7 +116,6 @@
         <option value="$PROJECT_DIR$/imports/ui/MainElements/SingleChallenge.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/SmallElements/UserCard.jsx" />
         <option value="$PROJECT_DIR$/client/main.css" />
-        <option value="$PROJECT_DIR$/client/main.html" />
         <option value="$PROJECT_DIR$/server/main.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/SmallElements/FacebookLogin.jsx" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -112,6 +123,7 @@
         <option value="$PROJECT_DIR$/imports/api/users.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/MainElements/ChallengesList.jsx" />
         <option value="$PROJECT_DIR$/imports/api/challenges.jsx" />
+        <option value="$PROJECT_DIR$/client/main.html" />
       </list>
     </option>
   </component>
@@ -675,12 +687,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512868637586</updated>
-      <workItem from="1512868645253" duration="11328000" />
+      <workItem from="1512868645253" duration="11568000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18761000" />
+    <option name="totallyTimeSpent" value="19001000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="777" extended-state="6" />
@@ -999,14 +1011,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/SmallElements/LandingNavbar.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -1050,10 +1054,10 @@
         <state relative-caret-position="-16669">
           <caret line="220" column="20" lean-forward="false" selection-start-line="220" selection-start-column="20" selection-end-line="220" selection-end-column="20" />
           <folding>
-            <marker date="1512880792670" expanded="true" signature="59885:59902" ph="..." />
-            <marker date="1512880792670" expanded="true" signature="59885:59920" ph="..." />
-            <marker date="1512880792670" expanded="true" signature="59885:59933" ph="..." />
-            <marker date="1512880792670" expanded="true" signature="59885:59948" ph="..." />
+            <marker date="1512881033208" expanded="true" signature="60544:60561" ph="..." />
+            <marker date="1512881033208" expanded="true" signature="60544:60579" ph="..." />
+            <marker date="1512881033208" expanded="true" signature="60544:60592" ph="..." />
+            <marker date="1512881033208" expanded="true" signature="60544:60607" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1142,6 +1146,14 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
