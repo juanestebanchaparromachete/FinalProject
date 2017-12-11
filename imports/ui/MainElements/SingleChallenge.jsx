@@ -19,8 +19,6 @@ class SingleChallenge extends Component {
       challenge: props.location.query,
       value: '',
     }
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.deleteProject = this.deleteProject.bind(this);
   }
 
   renderUsers() {
@@ -28,7 +26,6 @@ class SingleChallenge extends Component {
     let usernameHash = {};
     let amountHash = {};
     let quantityHash = {};
-    console.log(filteredSales)
     filteredSales.forEach(function (sale) {
       for (i = 0; i < sale.products.length; i++) {
         if (quantityHash[sale.userId] == undefined)
@@ -44,7 +41,6 @@ class SingleChallenge extends Component {
     let finalArray = [];
     for (var key in amountHash) {
       if (amountHash.hasOwnProperty(key)) {
-        console.log(quantityHash[key])
         finalArray.push({userId:key, value:amountHash[key], value2:quantityHash[key], userName: usernameHash[key]});
       }
     }
@@ -57,7 +53,6 @@ class SingleChallenge extends Component {
       }
       return comparison;
     }
-    console.log(finalArray)
     finalArray.sort(compare);
     return finalArray.map((obj, i) => {
       return (
@@ -68,48 +63,6 @@ class SingleChallenge extends Component {
         />
       );
     });
-  }
-
-
-  deleteProject() {
-    // confirmAlert({
-    //   title: '¿Seguro que quieres borrar este proyecto?',                        // Title dialog
-    //   message: 'Se eliminará el proyecto, los requerimientos y los comentarios.',               // Message dialog
-    //   // childrenElement: () => <div>Custom UI</div>,       // Custom UI or Component
-    //   confirmLabel: 'Confirmar',                           // Text button confirm
-    //   cancelLabel: 'Cancelar',                             // Text button cancel
-    //   onConfirm: () => this.submitDelete(),    // Action after Confirm
-    //   onCancel: () => console.log('nothing'),      // Action after Cancel
-    // })
-  }
-
-  submitDelete() {
-    // let b = this;
-    // Meteor.call('tasks.remove', this.state.task._id, function (error, result) {
-    //   if (error) {
-    //     Bert.alert( 'Debes iniciar sesión para poder publicar!', 'danger', 'growl-top-right' );
-    //   }
-    //   else{
-    //     b.setState({task:undefined})
-    //   }
-    // });
-  }
-
-  handleSubmit(event) {
-    // event.preventDefault();
-    // let b = this.state.value;
-    // Meteor.call('comments.insert', this.state.value, this.state.task._id, function (error, result) {
-    //   if (error) {
-    //     Bert.alert( 'Debes iniciar sesión para poder comentar!', 'danger', 'growl-top-right' );
-    //   }
-    //   else{
-    //     console.log(this.refs)
-    //     b = "";
-    //   }
-    // });
-    // console.log(this.refs)
-    // this.setState({value: b})
-    // this.forceUpdate();
   }
 
   render() {
@@ -142,7 +95,6 @@ class SingleChallenge extends Component {
     );
   }
 }
-
 
 export default createContainer(() => {
   Meteor.subscribe('sales', Session.get('challengeId'));
