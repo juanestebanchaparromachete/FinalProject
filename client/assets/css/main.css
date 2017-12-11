@@ -150,10 +150,14 @@ a:after {
 
 /* Green */
 #green {
-	background-color: #468C6C;
+	background-color: #387151;
 	padding-top: 80px;
     text-align: center !important;
 	margin-bottom: 0px;
+}
+
+.assign{
+	background-color: #007a99 !important;
 }
 
 #green h3 {
