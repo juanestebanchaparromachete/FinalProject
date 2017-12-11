@@ -1,26 +1,24 @@
 import { Meteor }from 'meteor/meteor'
-import { Challenges } from './challenges.jsx'
+import { Sales } from './sales.jsx'
 import { assert } from "meteor/practicalmeteor:chai";
 import { resetDatabase } from 'meteor/xolvio:cleaner';
 import { sinon } from 'meteor/practicalmeteor:sinon';
 import faker from "faker";
 
 if (Meteor.isServer) {
-  describe('challenges', function () {
+  describe('sales', function () {
 
-    function createTestChallenge() {
+    function createTestSale() {
       let obj = {
-        name: faker.name.findName(),
-        keyWords : [faker.lorem.word(), faker.lorem.word(), faker.lorem.word()],
-        keyWords : [faker.lorem.words(), faker.lorem.words(), faker.lorem.words()],
-        description: faker.lorem.sentence(),
-        thumbnail: faker.image.imageUrl(),
-        invite: faker.lorem.word()
+        challengeId: "tYss3Yy5XeQTaw4xy",
+        userId: "vasMcJmcr2YrdzfLw",
+        value: 3432532,
+        userName: "test"
       };
       return obj;
     }
 
-    describe('challenges.insert', function () {
+    describe('sales.insert', function () {
 
       beforeEach(function () {
         resetDatabase();
@@ -41,18 +39,18 @@ if (Meteor.isServer) {
         resetDatabase();
       });
 
-      it('Should add a new challenge', function () {
-        let tempObject = createTestChallenge();
-        let challengeId = Meteor.call('challenges.insert', tempObject);
+      it('Should add a new sale', function () {
+        let tempObject = createTestSale();
+        let challengeId = Meteor.call('sales.insert', tempObject);
 
-        let foundChallenge = Challenges.find({_id: challengeId}).fetch()[0];
+        let foundChallenge = Sales.find({_id: challengeId}).fetch()[0];
 
-        assert.equal(tempObject.thumbnail, foundChallenge.thumbnail)
+        assert.equal(tempObject.userId, foundChallenge.userId)
         assert.equal(foundChallenge == null, false)
       })
 
       it('Should throw a non-authorized error', function () {
-        let tempObject = createTestChallenge();
+        let tempObject = createTestSale();
         Meteor.user.restore();
         Meteor.userId.restore();
         resetDatabase();
@@ -74,7 +72,7 @@ if (Meteor.isServer) {
       })
     });
 
-    describe('challenges.remove', function () {
+    describe('sales.remove', function () {
 
       beforeEach(function () {
         resetDatabase();
@@ -96,12 +94,12 @@ if (Meteor.isServer) {
       });
 
       it('Should delete the previously inserted challenge', function () {
-        let tempObject = createTestChallenge();
-        let challengeId = Meteor.call('challenges.insert', tempObject)
+        let tempObject = createTestSale();
+        let challengeId = Meteor.call('sales.insert', tempObject)
 
-        Meteor.call('challenges.remove', challengeId);
+        Meteor.call('sales.remove', challengeId);
 
-        let foundComment = Challenges.find({_id: challengeId}).fetch()[0];
+        let foundComment = Sales.find({_id: challengeId}).fetch()[0];
 
         assert.isUndefined(foundComment);
 
@@ -121,7 +119,7 @@ if (Meteor.isServer) {
         Meteor.userId.returns(currentUser.userId);
         Meteor.user.returns(currentUser);
         try {
-          let tempObject = createTestChallenge();
+          let tempObject = createTestSale();
           let projectId = Meteor.call('challenges.insert', tempObject)
           Meteor.call('challenges.remove', commentId);
           assert.fail();
