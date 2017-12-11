@@ -101,6 +101,10 @@ class LandingNavbar extends Component {
     console.log('test')
   }
 
+  componentWillMount() {
+    Modal.setAppElement('body');
+  }
+
   handleSignUpSubmit2(info) {
     let b = this;
     let options = {
@@ -164,10 +168,8 @@ class LandingNavbar extends Component {
         this.props.error = error.reason;
       }
       else {
-        console.log('HERE')
         this.setState({modalIsOpen:false});
         b.forceUpdate();
-        console.log(b.props)
         redirectBasedOnUserType();
         b.forceUpdate();
       }
@@ -183,7 +185,6 @@ class LandingNavbar extends Component {
       else {
         this.setState({modalIsOpen:false});
         b.forceUpdate();
-        console.log(b.props)
         redirectBasedOnUserType();
         b.forceUpdate();
       }
@@ -197,7 +198,6 @@ class LandingNavbar extends Component {
         console.log('bad business');
       }
       else {
-        console.log(result)
         if (result[0].type === "MANAGER") {
           b.setState({
             redirect: <Redirect push to="/challenges"/>

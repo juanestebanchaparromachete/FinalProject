@@ -1,10 +1,7 @@
 import React, {Component, PropTypes} from 'react';
-import {Link} from 'react-router-dom';
 import classnames from 'classnames';
-import {Session} from 'meteor/session'
+import { Redirect } from 'react-router';
 
-
-// Task component - represents a single todo item
 export default class Sale extends Component {
 
   constructor(props) {
@@ -13,9 +10,9 @@ export default class Sale extends Component {
     this.state = {
       value: [],
       prod: '',
-      quant:0,
-      val: 0
-
+      quant: 0,
+      val: 0,
+      backToChallenge: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -24,31 +21,39 @@ export default class Sale extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-
-        productoASumar = this.state.prod;
-        challengeId = this.props.sale._id;
-        userId = Meteor.userId();
-        products = this.props.sale.products;
-        quantities = [];
-        for (i = 0; i < products.length; i++) {
-            if (productoASumar == products[i]) {
-                quantities.push(Number(this.state.quant));
-            } else {
-                quantities.push(0);
-            }
-        }
-        valueff = this.state.val;
-        usernameff = Meteor.user().username;
-        venta = {challengeId: challengeId, userId: userId, products: products, quantities: quantities, value: valueff, userName:usernameff }
-        Meteor.call('sales.add', venta, function (error, result) {
-            if (error) {
-                console.log(error)
-            }
-            else {
-                console.log('we good')
-                confirm('The sale of the product '+productoASumar +' has been registered to '+usernameff);
-            }
-        });
+    let b = this;
+    productoASumar = this.state.prod;
+    challengeId = this.props.sale._id;
+    userId = Meteor.userId();
+    products = this.props.sale.products;
+    quantities = [];
+    for (i = 0; i < products.length; i++) {
+      if (productoASumar == products[i]) {
+        quantities.push(Number(this.state.quant));
+      } else {
+        quantities.push(0);
+      }
+    }
+    valueff = this.state.val;
+    usernameff = Meteor.user().username;
+    venta = {
+      challengeId: challengeId,
+      userId: userId,
+      products: products,
+      quantities: quantities,
+      value: valueff,
+      userName: usernameff
+    }
+    Meteor.call('sales.add', venta, function (error, result) {
+      if (error) {
+        console.log(error)
+      }
+      else {
+        console.log('we good')
+        confirm('The sale of the product ' + productoASumar + ' has been registered to ' + usernameff);
+        b.setState({backToChallenge: true})
+      }
+    });
   }
 
   handleChange(event) {
@@ -56,19 +61,19 @@ export default class Sale extends Component {
   }
 
   render() {
-    const taskClassName = classnames({
-      // checked: this.props.challenge.checked,
-      // private: this.props.challenge.private,
-    });
+    console.log(this.props)
     return (
       <div className="col-md-12 mb-12" height="700px !important" align="middle">
+        {this.state.backToChallenge ?
+          <Redirect push to={'/challenges/id/' + this.props.sale._id}/> : null
+        }
         <img className="card-img-top" src={this.props.sale.thumbnail} width="300px"
              alt="Imagen descriptiva proyecto"/>
         <p className="card-text">{this.props.sale.description}</p>
         <form id="contact" className="form" onSubmit={this.handleSubmit}>
           <div className="row">
             <div className="col-md-4">
-              <label >Choose product: </label>
+              <label>Choose product: </label>
               <br/>
               <select value={this.state.prod} onClick={(event) => this.setState({prod: event.target.value})}
                       onChange={(event) => this.setState({prod: event.target.value})}>
@@ -79,13 +84,13 @@ export default class Sale extends Component {
               </select>
             </div>
             <div className="col-md-4">
-              <label >Insert quantity: </label>
+              <label>Insert quantity: </label>
               <input type="text" id="uname" name="name" value={this.state.quant}
                      onChange={(event) => this.setState({quant: event.target.value})}/>
             </div>
             <div className="col-md-4">
-              <label >Insert value: </label>
-              <input type="text" id="uname" name="name"value={this.state.val}
+              <label>Insert value: </label>
+              <input type="text" id="uname" name="name" value={this.state.val}
                      onChange={(event) => this.setState({val: event.target.value})}/>
             </div>
           </div>
