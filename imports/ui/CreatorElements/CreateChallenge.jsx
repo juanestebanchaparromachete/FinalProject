@@ -125,33 +125,33 @@ class CreateChallenge extends Component {
             <h3 id="publica">Create a new challenge!</h3>
             {/*<h4>Contact us for custom quote</h4>*/}
             <fieldset>
-              <label className="col-md-4" htmlFor="challengeName" style={{float:'left'}}>Challenge name:</label>
+              <label className="col-md-4" htmlFor="challengeName" id="cname" style={{float:'left'}}>Challenge name:</label>
               <input type="text" className="form-control col-md-8" id="challengeName"
-                     aria-labelledby="publica" required
+                     aria-label="Challenge name" aria-describedby="cname" required
                      value={this.state.name}
                      onChange={(event) => this.setState({name: event.target.value})}/>
             </fieldset>
             <fieldset>
-              <label className="col-md-4" htmlFor="challengeDesc" style={{float:'left'}}>Challenge description:</label>
-              <input type="text" className="form-control col-md-8" id="challengeDesc"
-                     aria-labelledby="publica" required
+              <label className="col-md-4" htmlFor="challengeDES" id="cdes" style={{float:'left'}}>Challenge description:</label>
+              <input type="text" className="form-control col-md-8" id="challengeDescription"
+                     aria-label="Challenge description" aria-describedby="cdes" required
                      value={this.state.description}
                      onChange={(event) => this.setState({description: event.target.value})}/>
             </fieldset>
             <fieldset>
-              <label className="col-md-4" htmlFor="challengeDesc" style={{float:'left'}}>Key words(comma separated):</label>
+              <label className="col-md-4" htmlFor="challengeDesc" id="ckey" style={{float:'left'}}>Key words(comma separated):</label>
               <input type="text" className="form-control col-md-8" id="challengeKeyWords"
-                     aria-labelledby="publica" required
+                     aria-label="key words" aria-describedby="ckey" required
                      value={this.state.keyWords}
                      onChange={(event) => this.setState({keyWords: event.target.value})}/>
             </fieldset>
             <fieldset>
               <div>
-                <label id="reqs"htmlFor="exampleInputEmail1">Eligible products for this challenge</label><br/>
+                <label id="reqs" htmlFor="exampleInputEmail1">Eligible products for this challenge</label><br/>
                 {this.renderProducts()}
                 <div style={{textAlign: 'center'}}>
                   <input type='button' value='Add another one' id="addMoreButton"
-                         onClick={this.addClick.bind(this)}/>
+                         aria-describedby="reqs" onClick={this.addClick.bind(this)}/>
                 </div>
               </div>
             </fieldset>

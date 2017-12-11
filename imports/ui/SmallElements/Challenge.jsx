@@ -16,7 +16,7 @@ export default class Challenge extends Component {
           <div className="card-body">
             <img className="card-img-top" src={this.props.challenge.thumbnail} width="200px" height="190px" alt="Imagen descriptiva proyecto"/>
             <p className="card-text">{this.props.challenge.description}</p>
-            <Link onClick={() => Session.set('challengeId', this.props.challenge._id)} to={{pathname: '/challenges/id/' + this.props.challenge._id, query: this.props.challenge}} className="btn btn-primary moreInfoButton">Ver detalle</Link>
+            <Link onClick={() => Session.set('challengeId', this.props.challenge._id)} to={{pathname: '/challenges/id/' + this.props.challenge._id, query: this.props.challenge}} className="btn btn-primary greenBut">Find more</Link>
           </div>
       </div>
     );
