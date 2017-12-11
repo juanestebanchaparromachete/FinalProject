@@ -8,8 +8,7 @@ export const Challenges = new Mongo.Collection('challenges');
 if (Meteor.isServer) {
   // This code only runs on the server
   Meteor.publish('challenges', function challengePublication(userId) {
-    if (Meteor.userId() == userId)
-      return Challenges.find({invite:Meteor.user().invite});
+    return Challenges.find({invite:Meteor.user().invite});
   });
 }
 
