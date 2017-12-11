@@ -8,11 +8,12 @@ export default class Sale extends Component {
     super(props);
     window.scrollTo(0, 0);
     this.state = {
-      value: [],
+        value: [],
       prod: '',
       quant: 0,
       val: 0,
-      backToChallenge: false
+      backToChallenge: false,
+        redirect: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -51,7 +52,8 @@ export default class Sale extends Component {
       else {
         console.log('we good')
         confirm('The sale of the product ' + productoASumar + ' has been registered to ' + usernameff);
-        b.setState({backToChallenge: true})
+        b.setState({backToChallenge: true});
+          b.setState({redirect: <Redirect push to={'/challenges/id/' + this.state.challengeId}/>});
       }
     });
   }
@@ -61,7 +63,6 @@ export default class Sale extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className="col-md-12 mb-12" height="700px !important" align="middle">
         {this.state.backToChallenge ?
