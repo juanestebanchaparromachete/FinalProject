@@ -20,9 +20,16 @@ class LandingNavbar extends Component {
       sUserId: '',
       sPassword: '',
       sInvite: '',
-        alert: null,
+      userType: '',
+      alert: null,
       redirect: null
     };
+    let b = this;
+    Meteor.call('users.type', function (error, result) {
+      if (error)
+        console.log('bad business');
+      b.setState({userType: result})
+    });
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -347,7 +354,7 @@ class LandingNavbar extends Component {
                     <Link className="navbarText " id="projectLink" to='/challenges'>Challenges</Link>
                   </li> : null
                 }
-                {this.props.currentUser ?
+                {this.props.currentUser && this.state.userType == 'MANAGER' ?
                   <li className="active">
                     <Link className="navbarText" id="optLink" to='/publish'>Publish</Link>
                   </li> : null

@@ -38,6 +38,15 @@ Meteor.methods({
       _id: text,
     }).fetch();
   },
+  'users.type'(text) {
+
+    // Make sure the user is logged in before inserting a challenge
+    if (! Meteor.userId()) {
+      throw new Meteor.Error('not-authorized');
+    }
+
+    return Meteor.user().type;
+  },
   'users.updateInvite'(inviteCode) {
     // Make sure the user is logged in before inserting a challenge
     if (! Meteor.userId()) {
