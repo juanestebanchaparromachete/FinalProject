@@ -47,12 +47,9 @@ class LandingNavbar extends Component {
       alert: null
     });
 
-    Meteor.call('', e, function (error, result) {
-      if (error) {
+    Meteor.call('users.updateInvite', e, function (error, result) {
+      if (error)
         console.log('bad business');
-      }
-      else {
-      }
     });
   }
 
@@ -125,7 +122,7 @@ class LandingNavbar extends Component {
             onConfirm={this.submitCode}
             onCancel={this.hideAlert}
           >
-            Write something interesting:
+            You must have received an invite code from your manager
           </SweetAlert>
         });
         b.forceUpdate();

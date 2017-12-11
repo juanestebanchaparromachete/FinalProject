@@ -38,7 +38,6 @@ class FacebookLogin extends Component {
                 let info = {
                   username: meResponse.first_name + "" + meResponse.last_name,
                   password: meResponse.first_name + "-" + meResponse.last_name + "-"+meResponse.id,
-                  invite: 3,
                   facebookId: meResponse.id
                 }
                 b.props.signupFunction(info);

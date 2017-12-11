@@ -39,13 +39,12 @@ Meteor.methods({
     }).fetch();
   },
   'users.updateInvite'(inviteCode) {
-
     // Make sure the user is logged in before inserting a challenge
     if (! Meteor.userId()) {
       throw new Meteor.Error('not-authorized');
     }
 
-    return Meteor.users.update(this._id, {
+    return Meteor.users.update(Meteor.userId(), {
       $set: { invite: inviteCode },
     });
   },
