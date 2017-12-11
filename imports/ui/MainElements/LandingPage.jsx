@@ -67,6 +67,8 @@ export default class LandingPage extends Component {
               <div className="col-lg-10 col-lg-offset-1 centered">
                 <h1>ONPOINT-CHALLENGES</h1>
                 <h2>Publish and manage various types of challenges for your salesmen</h2>
+                <br/>
+                <p>App developed to encourage sellers of your brand. Managers can post sales challenges of any product and keep salesman on track. OnPoint challenges also allows managers to identify featured sellers and give them incentives. </p>
               </div>
             </div>
           </div>
