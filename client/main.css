@@ -451,10 +451,12 @@ li {
 
 .card-body{
     padding: 5px 5px 5px 5px;
+
+    /*margin-bottom: 110px !important;*/
     background-color: transparent;
     text-align: center!important;
     border-style: solid;
-    max-height: 244px;
+    /*max-height: 244px;*/
     border-width: 4px;
     border-radius: 1px;
     border-color: white !important;
@@ -474,8 +476,15 @@ li {
 .user-card-text{
     margin-bottom: 4px;
 }
+.card-text{
+    height: 50px !important;
+    /*text-overflow: ellipsis;*/
+}
 .numberSpan{
     color: rgba(0,0,0,0.8);
+}
+.testDiv{
+    height: 328px !important;
 }
 
 /*----------------------------------------------------------------------------*/
